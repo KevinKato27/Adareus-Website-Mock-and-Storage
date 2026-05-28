@@ -101,11 +101,13 @@
       padding: 72px 0; border-top: 1px solid var(--border);
     }
     .founder:last-child { border-bottom: 1px solid var(--border); }
-    .founder-initials {
-      width: 72px; height: 72px; background: var(--ink); color: var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700;
-      margin-bottom: 22px; letter-spacing: 1px;
+    .founder-photo {
+      width: 100%; aspect-ratio: 1/1;
+      object-fit: cover; object-position: center top;
+      border-radius: var(--radius-md);
+      margin-bottom: 22px;
+      display: block;
+      filter: grayscale(8%);
     }
     .founder-name { font-size: 20px; font-weight: 700; margin-bottom: 3px; }
     .founder-role { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
@@ -170,6 +172,26 @@
     </div>
   </section>
 
+  <!-- MOTTO BAND -->
+  <div style="
+    background: var(--ink);
+    padding: 36px 56px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden;
+  ">
+    <div style="
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: clamp(28px, 5vw, 64px);
+      font-weight: 800; letter-spacing: -1px; line-height: 1;
+      color: var(--white); white-space: nowrap;
+    ">IMPROVEMENT <span style="color: var(--gold);">ACCELERATED.</span></div>
+    <div style="
+      font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.45);
+      max-width: 320px; line-height: 1.7; text-align: right; flex-shrink: 0; padding-left: 40px;
+    ">Est. 2024 · Southern California · Built by operators, for operators.</div>
+  </div>
+
   <!-- TICKER -->
   <div class="ticker-section">
     <div class="ticker-label-block">Founders' Background</div>
@@ -183,10 +205,6 @@
         <span class="ticker-item"><span class="ticker-dot"></span>Allergan</span>
         <span class="ticker-item"><span class="ticker-dot"></span>Blue Nile</span>
         <span class="ticker-item"><span class="ticker-dot"></span>Honeywell</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>UC Berkeley</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>USC</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>UC San Diego</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>Cal Poly Pomona</span>
         <span class="ticker-item"><span class="ticker-dot"></span>Toyota</span>
         <span class="ticker-item"><span class="ticker-dot"></span>FUJIFILM Diosynth</span>
         <span class="ticker-item"><span class="ticker-dot"></span>Amgen</span>
@@ -195,10 +213,6 @@
         <span class="ticker-item"><span class="ticker-dot"></span>Allergan</span>
         <span class="ticker-item"><span class="ticker-dot"></span>Blue Nile</span>
         <span class="ticker-item"><span class="ticker-dot"></span>Honeywell</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>UC Berkeley</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>USC</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>UC San Diego</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>Cal Poly Pomona</span>
       </div>
     </div>
   </div>
@@ -275,7 +289,7 @@
           <p>We set challenging, specific goals and track them against clear metrics. Vague improvements are not improvements at all — and good intentions don't count.</p>
         </div>
         <div class="value-card">
-          <div class="value-icon"><i class="ti ti-brain" aria-hidden="true"></i></div>
+          <div class="value-icon"><i class="ti ti-bulb" aria-hidden="true"></i></div>
           <h4>Expertise over algorithms</h4>
           <p>We bring judgment earned over decades of real decisions in complex environments. That's what separates meaningful transformation from a generated recommendation.</p>
         </div>
@@ -298,7 +312,7 @@
 
       <div class="founder">
         <div>
-          <div class="founder-initials">KK</div>
+          <img src="keith_hs.jpg" alt="Keith Kato" class="founder-photo" />
           <div class="founder-name">Keith Kato</div>
           <div class="founder-role">Co-Founder</div>
           <div class="founder-tags">
@@ -325,7 +339,7 @@
 
       <div class="founder">
         <div>
-          <div class="founder-initials">DL</div>
+          <img src="daniel_hs.jpg" alt="Daniel Lee" class="founder-photo" />
           <div class="founder-name">Daniel Lee</div>
           <div class="founder-role">Co-Founder</div>
           <div class="founder-tags">
@@ -338,7 +352,7 @@
         </div>
         <div>
           <div class="founder-bio">
-            <p>Daniel brings more than 17 years of multi-disciplinary experience in life sciences, spanning internal and external manufacturing, CDMO operations, quality assurance, quality control, supply chain, and operational excellence. Most recently Head of Operational Excellence at Atara Biotherapeutics.</p>
+            <p>Daniel brings more than 17 years of multi-gavel experience in life sciences, spanning internal and external manufacturing, CDMO operations, quality assurance, quality control, supply chain, and operational excellence. Most recently Head of Operational Excellence at Atara Biotherapeutics.</p>
             <p>Prior to Atara, Daniel held roles of increasing responsibility at Alexion, Amgen, and Allergan — responsible for mAb manufacturing, HPLC testing of BOTOX®, and JAPAC launch lead for multiple Amgen products including BLINCYTO® and Prolia®.</p>
             <p>Daniel's expertise centers on applied analytics, Management Systems for Operations, and QMS design across multiple biotech sites. BS in Biochemistry from UC San Diego, MBS from Keck Graduate Institute.</p>
           </div>
@@ -352,14 +366,14 @@
 
       <div class="founder">
         <div>
-          <div class="founder-initials">RU</div>
+          <img src="robert_hs.jpg" alt="Robert Uyekawa" class="founder-photo" />
           <div class="founder-name">Robert Uyekawa</div>
           <div class="founder-role">Co-Founder</div>
           <div class="founder-tags">
             <span class="ftag">TPS / Lean</span>
             <span class="ftag">Toyota</span>
             <span class="ftag">Kaizen</span>
-            <span class="ftag">Multi-industry</span>
+            <span class="ftag">Multi-building</span>
           </div>
         </div>
         <div>
