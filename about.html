@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — ADAREUS</title>
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -31,7 +31,7 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   background: var(--off-white);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
@@ -54,7 +54,7 @@ nav {
   overflow: hidden; border-radius: 6px;
 }
 .logo-wordmark {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
   font-size: 14px; font-weight: 700;
   letter-spacing: 3px; color: var(--ink);
 }
@@ -68,7 +68,7 @@ nav {
 .nav-cta {
   display: inline-flex; align-items: center; gap: 7px;
   padding: 9px 20px; font-size: 12.5px; font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   color: var(--white); background: var(--ink);
   border: none; cursor: pointer; border-radius: var(--radius-sm);
   text-decoration: none; transition: opacity 0.2s;
@@ -81,11 +81,11 @@ nav {
 
 /* ── TYPOGRAPHY ── */
 .display {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 700; letter-spacing: -1px; line-height: 1.0;
+  font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700; letter-spacing: -0.5px; line-height: 1.05;
 }
 .heading {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
   font-weight: 600; letter-spacing: -0.3px; line-height: 1.15;
 }
 .eyebrow {
@@ -97,7 +97,7 @@ nav {
 .btn-dark {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 13px 26px; font-size: 13px; font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   color: var(--white); background: var(--ink);
   border: none; border-radius: var(--radius-sm); cursor: pointer;
   text-decoration: none; transition: opacity 0.2s, transform 0.15s;
@@ -107,7 +107,7 @@ nav {
 .btn-outline {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 12px 24px; font-size: 13px; font-weight: 400;
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   color: var(--text-body); background: transparent;
   border: 1px solid var(--border-mid); border-radius: var(--radius-sm);
   cursor: pointer; text-decoration: none;
@@ -154,7 +154,7 @@ nav {
 .ticker-item {
   display: flex; align-items: center; gap: 10px;
   padding: 0 32px; border-right: 1px solid var(--border);
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
   font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
   color: var(--ink); text-transform: uppercase; white-space: nowrap;
 }
@@ -233,9 +233,9 @@ footer {
       max-width: 1160px; margin: 0 auto;
     }
     .page-hero h1 {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
       font-size: clamp(44px, 6vw, 80px);
-      font-weight: 800; line-height: 0.95; letter-spacing: -2px;
+      font-weight: 800; line-height: 0.95; letter-spacing: -0.5px;
       color: var(--ink); margin: 20px 0 0;
     }
     .page-hero h1 em { font-style: normal; color: var(--gold); }
@@ -246,7 +246,7 @@ footer {
     .hero-split p { font-size: 15px; font-weight: 300; color: var(--text-body); line-height: 1.85; }
     .hero-meta { display: flex; gap: 40px; align-items: flex-end; flex-wrap: wrap; }
     .meta-item .stat-num {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
       font-size: 32px; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 4px;
     }
     .meta-item .stat-label { font-size: 11.5px; color: var(--text-muted); }
@@ -262,7 +262,7 @@ footer {
       display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
     }
     .positioning-left h2 {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
       font-size: clamp(26px, 3vw, 38px); font-weight: 700;
       line-height: 1.15; letter-spacing: -0.5px; margin-top: 18px;
     }
@@ -270,7 +270,7 @@ footer {
     .positioning-right { display: flex; flex-direction: column; gap: 24px; padding-top: 6px; }
     .pos-point { display: flex; gap: 14px; align-items: flex-start; }
     .pos-num {
-      font-family: 'Bricolage Grotesque', sans-serif;
+      font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
       font-size: 11px; font-weight: 700; color: var(--gold);
       letter-spacing: 1px; padding-top: 3px; flex-shrink: 0; min-width: 24px;
     }
@@ -380,7 +380,7 @@ footer {
       <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:4px;" class="fu d1">
         <span class="eyebrow">About Adareus</span>
         <span style="
-          font-family: 'Bricolage Grotesque', sans-serif;
+          font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
           font-size: 11px; font-weight: 800; letter-spacing: 4px;
           text-transform: uppercase; color: var(--gold);
           border: 1.5px solid var(--gold-line); padding: 5px 14px;
@@ -394,7 +394,7 @@ footer {
           <div class="meta-item"><div class="stat-num">2024</div><div class="stat-label">Founded</div></div>
           <div class="meta-item"><div class="stat-num">SoCal</div><div class="stat-label">HQ</div></div>
           <div class="meta-item"><div class="stat-num">30+</div><div class="stat-label">Yrs expertise</div></div>
-          <div class="meta-item"><div class="stat-num">3</div><div class="stat-label">Co-founders</div></div>
+          <div class="meta-item"><div class="stat-num">3</div><div class="stat-label">Co-Founders</div></div>
         </div>
       </div>
     </div>
@@ -516,7 +516,7 @@ footer {
     <div class="team-inner">
       <div class="team-header">
         <div class="eyebrow">Leadership</div>
-        <p class="display">The co-founders</p>
+        <p class="display">Meet the Co-Founders</p>
       </div>
 
       <div class="founder">
