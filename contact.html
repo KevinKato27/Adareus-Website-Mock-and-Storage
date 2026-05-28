@@ -50,11 +50,11 @@
       display: flex; gap: 12px; align-items: flex-start;
     }
     .response-box i { color: var(--gold); font-size: 16px; padding-top: 1px; flex-shrink: 0; }
-    .response-box p { font-size: 12.5px; color: var(--text-body); line-height: 1.65; }
+    .response-box p { font-size: 13px; color: var(--text-body); line-height: 1.65; }
 
     /* RIGHT — FORM */
     .form-card {
-      background: var(--white); border: 1px solid var(--border);
+      background: var(--white); border: 1px solid var(--border-mid);
       border-radius: var(--radius-lg); padding: 48px 44px;
     }
     .form-card h2 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
@@ -65,17 +65,17 @@
     .form-label { font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); }
     .form-input, .form-select, .form-textarea {
       font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 300;
-      padding: 12px 14px; background: var(--off-white);
+      padding: 12px 14px; background: var(--white);
       border: 1px solid var(--border-mid); border-radius: var(--radius-sm);
       color: var(--ink); outline: none; width: 100%;
-      transition: border-color 0.2s, background 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s;
       -webkit-appearance: none;
     }
     .form-input::placeholder, .form-textarea::placeholder { color: var(--text-muted); }
     .form-input:focus, .form-select:focus, .form-textarea:focus {
-      border-color: var(--ink); background: var(--white);
+      border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-dim);
     }
-    .form-select { cursor: pointer; }
+    .form-select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237a8f9e' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
     .form-select option { background: var(--white); color: var(--ink); }
     .form-textarea { resize: vertical; min-height: 110px; line-height: 1.65; }
     .form-check { display: flex; align-items: flex-start; gap: 11px; }

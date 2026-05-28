@@ -113,25 +113,47 @@ nav {
 .section-inner { max-width: 1160px; margin: 0 auto; }
 
 /* ── LOGO TICKER ── */
-.ticker-wrap {
-  overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-  padding: 20px 0; background: var(--cream);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+/* ── TICKER ── */
+.ticker-section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  display: flex; align-items: stretch;
+}
+.ticker-label-block {
+  display: flex; align-items: center;
+  padding: 0 24px;
+  border-right: 1px solid var(--border);
+  background: var(--cream);
+  font-size: 10px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text-muted);
+  white-space: nowrap; flex-shrink: 0; z-index: 1;
+}
+.ticker-viewport {
+  overflow: hidden; flex: 1;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
 }
 .ticker-track {
-  display: flex; gap: 0; width: max-content;
-  animation: ticker 28s linear infinite;
+  display: flex; width: max-content;
+  animation: ticker-scroll 30s linear infinite;
+  padding: 16px 0;
 }
-@keyframes ticker {
+.ticker-track:hover { animation-play-state: paused; }
+@keyframes ticker-scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
 .ticker-item {
-  display: flex; align-items: center;
-  padding: 0 36px; border-right: 1px solid var(--border);
+  display: flex; align-items: center; gap: 10px;
+  padding: 0 32px; border-right: 1px solid var(--border);
   font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 13px; font-weight: 600; letter-spacing: 1px;
-  color: var(--text-muted); text-transform: uppercase; white-space: nowrap;
+  font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+  color: var(--ink); text-transform: uppercase; white-space: nowrap;
+}
+.ticker-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0;
 }
 
 /* ── FOOTER ── */
