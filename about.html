@@ -7,6 +7,8 @@
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -226,176 +228,44 @@ footer {
   .footer-bottom { flex-direction: column; gap: 16px; }
 }
 
-  </style>
-  <style>
-    .page-hero {
-      padding: 96px 56px 80px;
-      border-bottom: 1px solid var(--border);
-      max-width: 1160px; margin: 0 auto;
-    }
-    .page-hero h1 {
-      font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
-      font-size: clamp(44px, 6vw, 80px);
-      font-weight: 800; line-height: 0.95; letter-spacing: -0.5px;
-      color: var(--ink); margin: 20px 0 0;
-    }
-    .page-hero h1 em { font-style: normal; color: var(--gold); }
-    .hero-split {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
-      padding-top: 40px; border-top: 1px solid var(--border); margin-top: 40px;
-    }
-    .hero-split p { font-size: 15px; font-weight: 300; color: var(--text-body); line-height: 1.85; }
-    .hero-meta { display: flex; gap: 40px; align-items: flex-end; flex-wrap: wrap; }
-    .meta-item .stat-num {
-      font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
-      font-size: 32px; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 4px;
-    }
-    .meta-item .stat-label { font-size: 11.5px; color: var(--text-muted); }
+  
 
-    /* POSITIONING STATEMENT */
-    .positioning {
-      background: var(--ink-mid); color: var(--white);
-      padding: 80px 56px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .positioning-inner {
-      max-width: 1160px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
-    }
-    .positioning-left h2 {
-      font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
-      font-size: clamp(26px, 3vw, 38px); font-weight: 700;
-      line-height: 1.15; letter-spacing: -0.5px; margin-top: 18px;
-    }
-    .positioning-left h2 em { font-style: normal; color: var(--gold); }
-    .positioning-right { display: flex; flex-direction: column; gap: 24px; padding-top: 6px; }
-    .pos-point { display: flex; gap: 14px; align-items: flex-start; }
-    .pos-num {
-      font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
-      font-size: 11px; font-weight: 700; color: var(--gold);
-      letter-spacing: 1px; padding-top: 3px; flex-shrink: 0; min-width: 24px;
-    }
-    .pos-point p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.78); line-height: 1.7; }
-    .pos-point strong { color: var(--white); font-weight: 500; }
+body { font-size: 17px; }
+p { font-size: 15px; line-height: 1.85; }
+.founder-bio p { font-size: 15px !important; }
+.story-block p { font-size: 15px !important; }
+nav .nav-links a { font-size: 13px; }
 
-    /* STORY */
-    .story-section { padding: 104px 56px; border-bottom: 1px solid var(--border); }
-    .story-inner { max-width: 1160px; margin: 0 auto; }
-    .story-grid { display: grid; grid-template-columns: 320px 1fr; gap: 80px; }
-    .story-sidebar { position: sticky; top: 90px; align-self: start; }
-    .story-sidebar .display { font-size: 26px; margin-top: 14px; margin-bottom: 16px; }
-    .story-sidebar p { font-size: 13.5px; font-weight: 300; color: var(--text-body); line-height: 1.8; }
-    .story-blocks { display: flex; flex-direction: column; }
-    .story-block { padding: 36px 0; border-bottom: 1px solid var(--border); }
-    .story-block:first-child { padding-top: 0; }
-    .story-block h3 { font-size: 17px; font-weight: 600; margin-bottom: 12px; }
-    .story-block p { font-size: 14px; font-weight: 300; color: var(--text-body); line-height: 1.85; }
-    .story-block p + p { margin-top: 12px; }
 
-    /* VALUES */
-    .values-section { padding: 104px 56px; background: var(--off-white); border-bottom: 1px solid var(--border); }
-    .values-inner { max-width: 1160px; margin: 0 auto; }
-    .values-header { margin-bottom: 56px; }
-    .values-header .display { font-size: clamp(26px, 3vw, 38px); margin-top: 14px; }
-    .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .value-card {
-      background: var(--white); padding: 32px 26px;
-      border: 1px solid var(--border); border-radius: var(--radius-md);
-    }
-    .value-icon {
-      width: 42px; height: 42px; background: var(--ink);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--gold); margin-bottom: 18px;
-      border-radius: var(--radius-sm);
-    }
-    .value-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 9px; }
-    .value-card p { font-size: 12.5px; font-weight: 300; color: var(--text-body); line-height: 1.7; }
-
-    /* TEAM */
-    .team-section { padding: 104px 56px; border-bottom: 1px solid var(--border); }
-    .team-inner { max-width: 1160px; margin: 0 auto; }
-    .team-header { margin-bottom: 72px; }
-    .team-header .display { font-size: clamp(26px, 3vw, 38px); margin-top: 14px; }
-    .founder {
-      display: grid; grid-template-columns: 280px 1fr; gap: 64px;
-      padding: 72px 0; border-top: 1px solid var(--border);
-    }
-    .founder:last-child { border-bottom: 1px solid var(--border); }
-    .founder-photo {
-      width: 100%; aspect-ratio: 1/1;
-      object-fit: cover; object-position: center top;
-      border-radius: var(--radius-md);
-      margin-bottom: 22px;
-      display: block;
-      filter: grayscale(8%);
-    }
-    .founder-name { font-size: 20px; font-weight: 700; margin-bottom: 3px; }
-    .founder-role { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-    .founder-tags { display: flex; flex-wrap: wrap; gap: 7px; }
-    .ftag { font-size: 11px; padding: 4px 11px; border: 1px solid var(--border-mid); border-radius: 20px; color: var(--text-body); }
-    .founder-bio { font-size: 14px; font-weight: 300; color: var(--text-body); line-height: 1.9; margin-bottom: 28px; }
-    .founder-bio p + p { margin-top: 13px; }
-    .founder-highlights { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; }
-    .highlight { display: flex; align-items: flex-start; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--border); }
-    .highlight:last-child { border-bottom: none; }
-    .highlight i { color: var(--gold); font-size: 14px; padding-top: 2px; flex-shrink: 0; }
-    .highlight span { font-size: 12.5px; color: var(--text-body); line-height: 1.5; }
-
-    /* CTA */
-    .about-cta { padding: 104px 56px; background: var(--ink); text-align: center; }
-    .about-cta .eyebrow { color: var(--gold); justify-content: center; }
-    .about-cta .display { font-size: clamp(32px, 4vw, 56px); color: var(--white); margin: 18px auto 20px; max-width: 640px; }
-    .about-cta p { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.5); margin: 0 auto 40px; max-width: 460px; line-height: 1.8; }
-
-    @media (max-width: 860px) {
-      .page-hero { padding: 64px 20px 56px; }
-      .hero-split, .story-grid, .founder, .positioning-inner { grid-template-columns: 1fr; gap: 36px; }
-      .story-sidebar { position: static; }
-      .values-grid { grid-template-columns: 1fr 1fr; }
-      .story-section, .values-section, .team-section, .about-cta, .positioning { padding: 64px 20px; }
-    }
   </style>
 </head>
 <body>
-
 <nav>
   <a class="nav-logo" href="index.html">
-    <div class="logo-mark">
-      <img src="logo.jpg" alt="Adareus logo" style="width:34px;height:34px;display:block;" />
-    </div>
+    <div class="logo-mark"><img src="logo.jpg" alt="Adareus logo" style="width:34px;height:34px;display:block;" /></div>
     <span class="logo-wordmark">ADAREUS</span>
   </a>
   <div class="nav-links">
     <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="story.html">Our story</a>
     <a href="about.html" class="active">About</a>
     <a href="contact.html">Contact</a>
   </div>
   <a class="nav-cta" href="contact.html">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
 </nav>
-
 <div class="page">
-
-  <!-- PAGE HERO -->
+  <!-- HERO -->
   <section style="border-bottom:1px solid var(--border);">
-    <div class="page-hero">
-      <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:4px;" class="fu d1">
-        <span class="eyebrow">About Adareus</span>
-        <span style="
-          font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
-          font-size: 11px; font-weight: 800; letter-spacing: 4px;
-          text-transform: uppercase; color: var(--gold);
-          border: 1.5px solid var(--gold-line); padding: 5px 14px;
-          display: inline-block; width: fit-content;
-        ">Improvement Accelerated</span>
-      </div>
-      <h1 class="fu d2">Built by operators,<br><em>for operators.</em></h1>
-      <div class="hero-split fu d3">
-        <p>Adareus was founded by three industry veterans who spent decades inside the organizations they now help transform. We know the complexity of life sciences and tech firsthand — because we lived it at Toyota, Amgen, FUJIFILM, and beyond.</p>
-        <div class="hero-meta">
-          <div class="meta-item"><div class="stat-num">2024</div><div class="stat-label">Founded</div></div>
-          <div class="meta-item"><div class="stat-num">SoCal</div><div class="stat-label">HQ</div></div>
-          <div class="meta-item"><div class="stat-num">30+</div><div class="stat-label">Yrs expertise</div></div>
-          <div class="meta-item"><div class="stat-num">3</div><div class="stat-label">Co-Founders</div></div>
+    <div style="max-width:1160px; margin:0 auto; padding:64px 56px;">
+      <div class="eyebrow fu d1">Leadership</div>
+      <h1 style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:clamp(44px,6vw,72px); font-weight:800; line-height:0.95; letter-spacing:-0.5px; color:var(--ink); margin:20px 0 0;" class="fu d2">Built by operators,<br><em style="font-style:normal; color:var(--gold);">for operators.</em></h1>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; padding-top:40px; border-top:1px solid var(--border); margin-top:40px;" class="fu d3">
+        <p style="font-size:16px; font-weight:300; color:var(--text-body); line-height:1.85;">Three industry veterans who spent decades inside the organizations they now help transform. They know the complexity of life sciences and tech firsthand — because they lived it at Toyota, Amgen, FUJIFILM, and beyond.</p>
+        <div style="display:flex; gap:40px; align-items:flex-end; flex-wrap:wrap;">
+          <div><div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:30px; font-weight:800; color:var(--ink); line-height:1; margin-bottom:4px;">2024</div><div style="font-size:12px; color:var(--text-muted);">Founded</div></div>
+          <div><div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:30px; font-weight:800; color:var(--ink); line-height:1; margin-bottom:4px;">30+</div><div style="font-size:12px; color:var(--text-muted);">Yrs expertise</div></div>
+          <div><div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:30px; font-weight:800; color:var(--ink); line-height:1; margin-bottom:4px;">3×</div><div style="font-size:12px; color:var(--text-muted);">Intl. award winners</div></div>
         </div>
       </div>
     </div>
@@ -426,143 +296,6 @@ footer {
       </div>
     </div>
   </div>
-
-  <!-- POSITIONING STATEMENT -->
-  <div class="positioning">
-    <div class="positioning-inner">
-      <div class="positioning-left">
-        <div class="eyebrow" style="color:var(--gold);">What sets us apart</div>
-        <h2>In a world of<br>generic frameworks<br>and <em>AI-generated advice,</em><br>expertise is the differentiator.</h2>
-      </div>
-      <div class="positioning-right">
-        <div class="pos-point">
-          <div class="pos-num">—</div>
-          <p><strong>We are not a generalist firm.</strong> Adareus works exclusively in tech and life sciences — environments where the operational complexity demands genuine domain knowledge, not industry-agnostic frameworks.</p>
-        </div>
-        <div class="pos-point">
-          <div class="pos-num">—</div>
-          <p><strong>We are not a report factory.</strong> Every engagement ends with capability built inside your organization — teams who understand the why, not just the what.</p>
-        </div>
-        <div class="pos-point">
-          <div class="pos-num">—</div>
-          <p><strong>We are not replaceable by AI.</strong> The judgment, trust, and contextual intelligence required to transform real organizations is built over decades in the field. That's what we bring.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- STORY -->
-  <section class="story-section">
-    <div class="story-inner">
-      <div class="story-grid">
-        <div class="story-sidebar">
-          <div class="eyebrow">Our story</div>
-          <p class="display">Where we come from</p>
-          <p>Decades in the field shaped how we work. We approach organizations as fellow operators who've faced the same pressures — not as outside advisors applying generic playbooks.</p>
-        </div>
-        <div class="story-blocks">
-          <div class="story-block">
-            <h3>Founded on a shared frustration</h3>
-            <p>After decades leading operations at some of the most demanding organizations in life sciences, biotech, and manufacturing, our three co-founders shared a common observation: most consulting engagements produce great recommendations that go nowhere.</p>
-            <p>The problem wasn't the strategy. It was the gap between knowing and doing — between receiving a report and actually building the capability to execute on it.</p>
-          </div>
-          <div class="story-block">
-            <h3>Domain knowledge as a moat</h3>
-            <p>The rise of AI-powered strategy tools has made generic advice cheaper than ever. But it has also made genuine domain expertise — the kind earned through 30 years inside GMP facilities, Toyota production lines, and biotech manufacturing floors — more valuable than ever.</p>
-            <p>Adareus was built on that expertise. We work in tech and life sciences because that's where our knowledge is deepest and where the stakes of getting it right are highest.</p>
-          </div>
-          <div class="story-block">
-            <h3>The name</h3>
-            <p>Adareus is rooted in ancient Greek, meaning <em style="font-style:normal; font-weight:500; color:var(--ink);">"possessing goodness."</em> It's not an accident. We named the firm to reflect the standard we hold ourselves to — not just in the quality of our work, but in how we treat the people inside every organization we enter.</p>
-          </div>
-          <div class="story-block">
-            <h3>Our mission</h3>
-            <p>To partner with innovative clients and make a difference by unlocking the full potential of people and processes. We distinguish ourselves through decades of operations experience across diverse industries, deep technical expertise that enables multiple high-impact engagements simultaneously, and a people-first approach that translates knowledge into lasting capability.</p>
-          </div>
-          <div class="story-block">
-            <h3>Improvement Accelerated</h3>
-            <p>Our tagline is a commitment. Every engagement is built around measurable goals, defined timelines, and genuine knowledge transfer. We measure success not by deliverables handed over, but by capability built within your organization — capability that compounds long after we leave.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STORY CTA -->
-  <div style="background:var(--off-white); padding:48px 56px; border-bottom:1px solid var(--border);">
-    <div style="max-width:1160px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;">
-      <div>
-        <p style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:22px; font-weight:700; color:var(--ink); margin-bottom:6px;">Ready to see what we can do for your organization?</p>
-        <p style="font-size:14px; font-weight:300; color:var(--text-body);">See our services or start a conversation — we respond within 24–48 hours.</p>
-      </div>
-      <div style="display:flex; gap:12px; flex-wrap:wrap; flex-shrink:0;">
-        <a class="btn-dark" href="contact.html">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        <a class="btn-outline" href="index.html#services">See our services</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- VALUES -->
-  <section class="values-section">
-    <div class="values-inner">
-      <div class="values-header">
-        <div class="eyebrow">How we operate</div>
-        <p class="display">Our values</p>
-      </div>
-      <div style="margin-bottom: 48px;">
-        <p style="font-size:15px; font-weight:300; color:var(--text-body); line-height:1.85; max-width:680px;">
-          The name <em style="font-style:normal; font-weight:500;">Adareus</em> is rooted in the ancient Greek meaning of <em style="font-style:normal; font-weight:500;">"possessing goodness."</em> It shapes everything about how we work — captured in five principles we call <strong style="font-weight:600;">DRIVE.</strong>
-        </p>
-      </div>
-      <div style="display:flex; flex-direction:column; gap:0; border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden;">
-        <div style="display:grid; grid-template-columns:80px 1fr; gap:0; border-bottom:1px solid var(--border);">
-          <div style="background:var(--ink); display:flex; align-items:center; justify-content:center; padding:32px 20px;">
-            <span style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:36px; font-weight:800; color:var(--gold);">D</span>
-          </div>
-          <div style="padding:28px 32px; background:var(--white);">
-            <div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:6px;">Dedicated</div>
-            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7;">We provide evidence-based recommendations and apply best practices from our diverse experiences — committed fully to every engagement we take on.</p>
-          </div>
-        </div>
-        <div style="display:grid; grid-template-columns:80px 1fr; gap:0; border-bottom:1px solid var(--border);">
-          <div style="background:var(--ink); display:flex; align-items:center; justify-content:center; padding:32px 20px;">
-            <span style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:36px; font-weight:800; color:var(--gold);">R</span>
-          </div>
-          <div style="padding:28px 32px; background:var(--white);">
-            <div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:6px;">Results-driven</div>
-            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7;">We set challenging, measurable goals and deliver results that increase value-add activities for clients of all sizes. Good intentions don't count — outcomes do.</p>
-          </div>
-        </div>
-        <div style="display:grid; grid-template-columns:80px 1fr; gap:0; border-bottom:1px solid var(--border);">
-          <div style="background:var(--ink); display:flex; align-items:center; justify-content:center; padding:32px 20px;">
-            <span style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:36px; font-weight:800; color:var(--gold);">I</span>
-          </div>
-          <div style="padding:28px 32px; background:var(--white);">
-            <div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:6px;">Innovative</div>
-            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7;">We cultivate a continuous improvement mindset and push for innovative ways to serve our clients and their people — never defaulting to the same playbook twice.</p>
-          </div>
-        </div>
-        <div style="display:grid; grid-template-columns:80px 1fr; gap:0; border-bottom:1px solid var(--border);">
-          <div style="background:var(--ink); display:flex; align-items:center; justify-content:center; padding:32px 20px;">
-            <span style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:36px; font-weight:800; color:var(--gold);">V</span>
-          </div>
-          <div style="padding:28px 32px; background:var(--white);">
-            <div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:6px;">Virtuous</div>
-            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7;">We take the meaning of Adareus — "possessing goodness" — seriously. We operate in line with the highest moral and ethical standards in every engagement.</p>
-          </div>
-        </div>
-        <div style="display:grid; grid-template-columns:80px 1fr; gap:0;">
-          <div style="background:var(--ink); display:flex; align-items:center; justify-content:center; padding:32px 20px;">
-            <span style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:36px; font-weight:800; color:var(--gold);">E</span>
-          </div>
-          <div style="padding:28px 32px; background:var(--white);">
-            <div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:6px;">Excellence</div>
-            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7;">We are accountable and committed to our relentless pursuit of excellence — for our clients, their teams, and every process we touch.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- TEAM -->
   <section class="team-section">
@@ -654,16 +387,16 @@ footer {
     </div>
   </section>
 
-  <section class="about-cta">
-    <div class="eyebrow">Work with us</div>
-    <p class="display">Ready to build<br>something lasting?</p>
-    <p>Tell us about your organization and the challenges you're facing. We respond within 24–48 hours.</p>
+  <!-- CTA -->
+  <section style="background:var(--ink); padding:80px 56px; text-align:center;">
+    <div class="eyebrow" style="color:var(--gold); justify-content:center; margin-bottom:16px;">Work with us</div>
+    <p style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-0.5px; color:var(--white); margin-bottom:16px; line-height:1.1;">Ready to build<br><span style="color:var(--gold);">something lasting?</span></p>
+    <p style="font-size:16px; font-weight:300; color:rgba(255,255,255,0.5); max-width:440px; margin:0 auto 36px; line-height:1.8;">Tell us about your organization. We respond within 24–48 hours.</p>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-      <a class="btn-dark" href="contact.html" style="background:var(--gold); color:var(--ink); font-weight:600; display:inline-flex;">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a class="btn-outline" href="index.html" style="border-color:rgba(255,255,255,0.2); color:rgba(255,255,255,0.6);">Back to home</a>
+      <a class="btn-dark" href="contact.html" style="background:var(--gold); color:var(--ink); font-weight:600;">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a class="btn-outline" href="story.html" style="border-color:rgba(255,255,255,0.2); color:rgba(255,255,255,0.6);">Our story</a>
     </div>
   </section>
-
   <footer>
     <div class="footer-top">
       <div class="footer-brand">
@@ -677,6 +410,8 @@ footer {
         <div class="footer-col-label">Navigation</div>
         <div class="footer-links-list">
           <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="story.html">Our story</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </div>
@@ -695,7 +430,6 @@ footer {
       <a class="social-link" href="https://www.linkedin.com/company/adareus" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
     </div>
   </footer>
-
 </div>
 </body>
 </html>

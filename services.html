@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — ADAREUS</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:         #0b1620;
+  --ink-mid:     #122233;
+  --ink-light:   #1e3a52;
+  --gold:        #b8965a;
+  --gold-dim:    rgba(184,150,90,0.12);
+  --gold-line:   rgba(184,150,90,0.3);
+  --white:       #ffffff;
+  --off-white:   #edf2f7;
+  --cream:       #d8e4ef;
+  --text-body:   #3d4f5e;
+  --text-muted:  #7a8f9e;
+  --border:      rgba(11,22,32,0.08);
+  --border-mid:  rgba(11,22,32,0.14);
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: var(--off-white);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 56px; height: 66px;
+  background: rgba(237,242,247,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.logo-mark {
+  width: 34px; height: 34px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; border-radius: 6px;
+}
+.logo-wordmark {
+  font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 3px; color: var(--ink);
+}
+.nav-links { display: flex; align-items: center; gap: 36px; }
+.nav-links a {
+  font-size: 12.5px; font-weight: 400; letter-spacing: 0.5px;
+  color: var(--text-body); text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--ink); }
+.nav-cta {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 9px 20px; font-size: 12.5px; font-weight: 500;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  color: var(--white); background: var(--ink);
+  border: none; cursor: pointer; border-radius: var(--radius-sm);
+  text-decoration: none; transition: opacity 0.2s;
+  letter-spacing: 0.3px;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* ── PAGE SHELL ── */
+.page { padding-top: 66px; }
+
+/* ── TYPOGRAPHY ── */
+.display {
+  font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700; letter-spacing: -0.5px; line-height: 1.05;
+}
+.heading {
+  font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600; letter-spacing: -0.3px; line-height: 1.15;
+}
+.eyebrow {
+  font-size: 11px; font-weight: 500; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--gold);
+}
+
+/* ── BUTTONS ── */
+.btn-dark {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 26px; font-size: 13px; font-weight: 500;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  color: var(--white); background: var(--ink);
+  border: none; border-radius: var(--radius-sm); cursor: pointer;
+  text-decoration: none; transition: opacity 0.2s, transform 0.15s;
+  letter-spacing: 0.2px;
+}
+.btn-dark:hover { opacity: 0.85; transform: translateY(-1px); }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px; font-size: 13px; font-weight: 400;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  color: var(--text-body); background: transparent;
+  border: 1px solid var(--border-mid); border-radius: var(--radius-sm);
+  cursor: pointer; text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline:hover { border-color: var(--ink); color: var(--ink); }
+
+/* ── SECTION ── */
+.section { padding: 96px 56px; }
+.section-inner { max-width: 1160px; margin: 0 auto; }
+
+/* ── LOGO TICKER ── */
+/* ── TICKER ── */
+.ticker-section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  display: flex; align-items: stretch;
+}
+.ticker-label-block {
+  display: flex; align-items: center;
+  padding: 0 24px;
+  border-right: 1px solid var(--border);
+  background: var(--cream);
+  font-size: 10px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text-muted);
+  white-space: nowrap; flex-shrink: 0; z-index: 1;
+}
+.ticker-viewport {
+  overflow: hidden; flex: 1;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+.ticker-track {
+  display: flex; width: max-content;
+  animation: ticker-scroll 30s linear infinite;
+  padding: 16px 0;
+}
+.ticker-track:hover { animation-play-state: paused; }
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.ticker-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 0 36px; border-right: 1px solid var(--border);
+  font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
+  color: var(--text-body); white-space: nowrap;
+  text-transform: uppercase; transition: color 0.2s;
+}
+.ticker-item:hover { color: var(--ink); }
+.ticker-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0;
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--ink); color: var(--white);
+  padding: 56px 56px 40px;
+}
+.footer-top {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px; padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 32px;
+}
+.footer-brand .logo-wordmark { color: var(--white); }
+.footer-tagline {
+  font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.45);
+  line-height: 1.7; margin-top: 12px; max-width: 240px;
+}
+.footer-col-label {
+  font-size: 10px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: rgba(255,255,255,0.35);
+  margin-bottom: 16px;
+}
+.footer-links-list { display: flex; flex-direction: column; gap: 10px; }
+.footer-links-list a {
+  font-size: 13px; color: rgba(255,255,255,0.55); text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links-list a:hover { color: var(--white); }
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
+.social-link {
+  width: 34px; height: 34px; border: 1px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.4); text-decoration: none; font-size: 16px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.social-link:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fu { animation: fadeUp 0.55s ease both; }
+.d1 { animation-delay: 0.05s; }
+.d2 { animation-delay: 0.15s; }
+.d3 { animation-delay: 0.25s; }
+.d4 { animation-delay: 0.38s; }
+.d5 { animation-delay: 0.50s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .section { padding: 64px 20px; }
+  footer { padding: 48px 20px 32px; }
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 16px; }
+}
+
+  
+
+body { font-size: 17px; }
+p { font-size: 15px; line-height: 1.85; }
+.founder-bio p { font-size: 15px !important; }
+.story-block p { font-size: 15px !important; }
+.service-desc-col p { font-size: 15px !important; }
+.step-body p { font-size: 14px !important; }
+.ai-point p { font-size: 14px !important; }
+.problem-card p { font-size: 14px !important; }
+nav .nav-links a { font-size: 13px; }
+.highlight span { font-size: 13.5px !important; }
+
+
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="logo-mark"><img src="logo.jpg" alt="Adareus logo" style="width:34px;height:34px;display:block;" /></div>
+    <span class="logo-wordmark">ADAREUS</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="story.html">Our story</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <a class="nav-cta" href="contact.html">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+</nav>
+<div class="page">
+  <!-- HERO -->
+  <section style="border-bottom:1px solid var(--border);">
+    <div style="max-width:1160px; margin:0 auto; padding:64px 56px;">
+      <div class="eyebrow fu d1">What we do</div>
+      <h1 style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:clamp(44px,6vw,72px); font-weight:800; line-height:0.95; letter-spacing:-0.5px; color:var(--ink); margin:20px 0 0;" class="fu d2">Our services</h1>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; padding-top:40px; border-top:1px solid var(--border); margin-top:40px;" class="fu d3">
+        <p style="font-size:16px; font-weight:300; color:var(--text-body); line-height:1.85;">We bring decades of deep subject-matter expertise to provide unique solutions that deliver meaningful results. Our consulting projects are client-centric, collaborative, and customizable to fulfill the needs of each partnership.</p>
+        <div style="display:flex; gap:40px; align-items:flex-end; flex-wrap:wrap;">
+          <div><div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:30px; font-weight:800; color:var(--ink); line-height:1; margin-bottom:4px;">3</div><div style="font-size:12px; color:var(--text-muted);">Core practices</div></div>
+          <div><div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:30px; font-weight:800; color:var(--ink); line-height:1; margin-bottom:4px;">100%</div><div style="font-size:12px; color:var(--text-muted);">Customized engagements</div></div>
+          <div><div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:30px; font-weight:800; color:var(--ink); line-height:1; margin-bottom:4px;">30+</div><div style="font-size:12px; color:var(--text-muted);">Years in GMP & ops</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 01 -->
+  <section style="padding:80px 56px; border-bottom:1px solid var(--border); background:var(--white);">
+    <div style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:1fr 1.6fr; gap:80px; align-items:start;">
+      <div>
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:var(--gold); margin-bottom:16px;">01</div>
+        <h2 style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:clamp(28px,3vw,40px); font-weight:800; color:var(--ink); letter-spacing:-0.5px; line-height:1.1; margin-bottom:20px;">Business Strategy</h2>
+        <p style="font-size:15px; font-weight:300; color:var(--text-body); line-height:1.85; margin-bottom:28px;">We help leadership teams in tech and life sciences build clear, executable strategy — not slide decks. From organizational goals deployment and quality system assessments to business reviews and site readiness, we connect vision to the operational reality of getting there.</p>
+        <a class="btn-dark" href="contact.html">Discuss this practice <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:0; border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;">
+          <div style="padding:28px 26px; border-bottom:1px solid var(--border); border-right:1px solid var(--border);">
+            <div style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Organizational Goals</div>
+            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7; margin:0;">Deploy goals cascades top-down and bottom-up to ensure alignment and accountability at every level of your organization.</p>
+          </div>
+          <div style="padding:28px 26px; border-bottom:1px solid var(--border);">
+            <div style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Strategy Design & Deployment</div>
+            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7; margin:0;">Build strategies that translate directly into operational priorities — with clear owners, timelines, and measurable outcomes.</p>
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;">
+          <div style="padding:28px 26px; border-right:1px solid var(--border);">
+            <div style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Business & Ops Assessments</div>
+            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7; margin:0;">Structured evaluations of your operations against best practices — identifying gaps, risks, and high-value improvement opportunities.</p>
+          </div>
+          <div style="padding:28px 26px;">
+            <div style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">GMP Quality System Assessments</div>
+            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7; margin:0;">Ensure your quality systems meet regulatory expectations — from FDA readiness to EU PAI preparation and ongoing compliance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 02 -->
+  <section style="padding:80px 56px; border-bottom:1px solid var(--border); background:var(--off-white);">
+    <div style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:1fr 1.6fr; gap:80px; align-items:start;">
+      <div>
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:var(--gold); margin-bottom:16px;">02</div>
+        <h2 style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:clamp(28px,3vw,40px); font-weight:800; color:var(--ink); letter-spacing:-0.5px; line-height:1.1; margin-bottom:20px;">Operations</h2>
+        <p style="font-size:15px; font-weight:300; color:var(--text-body); line-height:1.85; margin-bottom:28px;">Deep operational expertise across GMP and non-GMP manufacturing, biotech process development, CDMO operations, and high-growth tech infrastructure. We speak FDA, TPS, and Kaizen fluently — and we bring that fluency into your facility, not just a slide deck.</p>
+        <a class="btn-dark" href="contact.html">Discuss this practice <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:0; border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;">
+          <div style="padding:28px 26px; border-bottom:1px solid var(--border); border-right:1px solid var(--border); background:var(--white);">
+            <div style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Lean & TPS Implementation</div>
+            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7; margin:0;">Apply Toyota Production System philosophy to eliminate waste, improve flow, and build sustainable operational discipline across your sites.</p>
+          </div>
+          <div style="padding:28px 26px; border-bottom:1px solid var(--border); background:var(--white);">
+            <div style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">GMP Ops & CAPA Management</div>
+            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7; margin:0;">Navigate FDA 483 responses, CAPA systems, and ongoing compliance with experienced operators who've been through inspections firsthand.</p>
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;">
+          <div style="padding:28px 26px; border-right:1px solid var(--border); background:var(--white);">
+            <div style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Data Analytics & Dashboards</div>
+            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7; margin:0;">Transform raw operational data into meaningful visual tools that drive decisions — from batch tracking to KPI dashboards and predictive modeling.</p>
+          </div>
+          <div style="padding:28px 26px; background:var(--white);">
+            <div style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">KPI & Metrics Development</div>
+            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7; margin:0;">Design measurement systems that track what actually matters — linking site-level metrics to organizational goals at every level.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 03 -->
+  <section style="padding:80px 56px; border-bottom:1px solid var(--border); background:var(--white);">
+    <div style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:1fr 1.6fr; gap:80px; align-items:start;">
+      <div>
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:var(--gold); margin-bottom:16px;">03</div>
+        <h2 style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:clamp(28px,3vw,40px); font-weight:800; color:var(--ink); letter-spacing:-0.5px; line-height:1.1; margin-bottom:20px;">Management Consulting</h2>
+        <p style="font-size:15px; font-weight:300; color:var(--text-body); line-height:1.85; margin-bottom:28px;">We don't just advise — we build the management capability to sustain results. Using proven methodologies including A3 problem solving, PDCA, and Kaizen, we coach leaders, embed management systems, and transfer the institutional knowledge your team needs to operate independently at a higher level.</p>
+        <a class="btn-dark" href="contact.html">Discuss this practice <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:0; border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;">
+          <div style="padding:28px 26px; border-bottom:1px solid var(--border); border-right:1px solid var(--border); background:var(--off-white);">
+            <div style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Leadership & Team Coaching</div>
+            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7; margin:0;">Develop leaders who can sustain operational excellence independently — with coaching grounded in real manufacturing and business experience.</p>
+          </div>
+          <div style="padding:28px 26px; border-bottom:1px solid var(--border); background:var(--off-white);">
+            <div style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Integrated Management Systems</div>
+            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7; margin:0;">Design and deploy IMS frameworks that connect quality, operations, and strategy into a single coherent management structure.</p>
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;">
+          <div style="padding:28px 26px; border-right:1px solid var(--border); background:var(--off-white);">
+            <div style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">A3 & Advanced Problem-Solving</div>
+            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7; margin:0;">Train your teams in structured problem-solving methodologies — A3, PDCA, 8D — so root cause identification becomes an internal capability.</p>
+          </div>
+          <div style="padding:28px 26px; background:var(--off-white);">
+            <div style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px;">Value Stream Mapping & Kanban</div>
+            <p style="font-size:13.5px; font-weight:300; color:var(--text-body); line-height:1.7; margin:0;">Map end-to-end process flows, identify waste, and implement pull systems that reduce lead times and improve throughput.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--ink); padding:80px 56px; text-align:center;">
+    <div class="eyebrow" style="color:var(--gold); justify-content:center; margin-bottom:16px;">Work with us</div>
+    <p style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-0.5px; color:var(--white); margin-bottom:16px; line-height:1.1;">Let's find the right practice<br>for <span style="color:var(--gold);">your situation.</span></p>
+    <p style="font-size:16px; font-weight:300; color:rgba(255,255,255,0.5); max-width:440px; margin:0 auto 36px; line-height:1.8;">Tell us about your organization and we'll match the right approach to your specific challenge.</p>
+    <a class="btn-dark" href="contact.html" style="background:var(--gold); color:var(--ink); font-weight:600; display:inline-flex; align-items:center; gap:8px;">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </section>
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="nav-logo" href="index.html" style="text-decoration:none;">
+          <div class="logo-mark"><img src="logo.jpg" alt="Adareus logo" style="width:34px;height:34px;display:block;" /></div>
+          <span class="logo-wordmark">ADAREUS</span>
+        </a>
+        <p class="footer-tagline">Improvement Accelerated. The expertise no algorithm can replace.</p>
+      </div>
+      <div>
+        <div class="footer-col-label">Navigation</div>
+        <div class="footer-links-list">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="story.html">Our story</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-label">Practices</div>
+        <div class="footer-links-list">
+          <a href="contact.html">Business Strategy</a>
+          <a href="contact.html">Operations</a>
+          <a href="contact.html">Management Consulting</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Adareus · Southern California · All rights reserved</span>
+      <a class="social-link" href="https://www.linkedin.com/company/adareus" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
