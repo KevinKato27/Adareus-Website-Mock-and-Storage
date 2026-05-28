@@ -11,14 +11,14 @@
 
 :root {
   --ink:         #0b1620;
-  --ink-mid:     #1a2e40;
-  --ink-light:   #243d52;
+  --ink-mid:     #122233;
+  --ink-light:   #1e3a52;
   --gold:        #b8965a;
   --gold-dim:    rgba(184,150,90,0.12);
   --gold-line:   rgba(184,150,90,0.3);
   --white:       #ffffff;
-  --off-white:   #f0f4f8;
-  --cream:       #e4edf5;
+  --off-white:   #edf2f7;
+  --cream:       #d8e4ef;
   --text-body:   #3d4f5e;
   --text-muted:  #7a8f9e;
   --border:      rgba(11,22,32,0.08);
@@ -43,7 +43,7 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 56px; height: 66px;
-  background: rgba(248,247,244,0.88);
+  background: rgba(237,242,247,0.92);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
@@ -266,7 +266,7 @@ footer {
 
     /* AI BANNER */
     .ai-banner {
-      background: var(--ink); color: var(--white);
+      background: var(--ink-light); color: var(--white);
       padding: 56px;
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
@@ -326,7 +326,7 @@ footer {
     /* SERVICES */
     .services-section {
       padding: 104px 56px;
-      background: var(--ink); color: var(--white);
+      background: var(--ink-mid); color: var(--white);
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
     .services-inner { max-width: 1160px; margin: 0 auto; }
@@ -368,7 +368,7 @@ footer {
     .industries-section {
       padding: 80px 56px;
       border-bottom: 1px solid var(--border);
-      background: var(--cream);
+      background: var(--off-white);
     }
     .industries-inner { max-width: 1160px; margin: 0 auto; }
     .industries-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
@@ -399,6 +399,7 @@ footer {
     .approach-section {
       padding: 104px 56px;
       border-bottom: 1px solid var(--border);
+      background: var(--white);
     }
     .approach-inner { max-width: 1160px; margin: 0 auto; }
     .approach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
@@ -435,6 +436,7 @@ footer {
 <body>
 
 <nav>
+
   <a class="nav-logo" href="index.html">
     <div class="logo-mark">
       <img src="logo.jpg" alt="Adareus logo" style="width:34px;height:34px;display:block;" />
@@ -471,15 +473,15 @@ footer {
           <div class="hero-stats">
             <div>
               <div class="stat-num">30+</div>
-              <div class="stat-label">Years expertise</div>
+              <div class="stat-label">Years in GMP & ops</div>
             </div>
             <div>
-              <div class="stat-num">3</div>
-              <div class="stat-label">Award-winning founders</div>
+              <div class="stat-num">3×</div>
+              <div class="stat-label">Intl. award winners</div>
             </div>
             <div>
-              <div class="stat-num">100%</div>
-              <div class="stat-label">Human judgment</div>
+              <div class="stat-num">6+</div>
+              <div class="stat-label">Industries operated in</div>
             </div>
           </div>
         </div>
@@ -488,9 +490,10 @@ footer {
   </section>
 
 
+
   <!-- TICKER -->
   <div class="ticker-section">
-    <div class="ticker-label-block">Founders' Background</div>
+    <div class="ticker-label-block">Built inside these organizations</div>
     <div class="ticker-viewport">
       <div class="ticker-track">
         <span class="ticker-item" style="font-weight:800; letter-spacing:3px; font-size:13px;">TOYOTA</span>
@@ -512,6 +515,94 @@ footer {
       </div>
     </div>
   </div>
+
+
+  <!-- SERVICES -->
+  <section class="services-section">
+    <div class="services-inner">
+      <div class="services-header">
+        <div>
+          <div class="eyebrow">What we do</div>
+          <p class="display">Three core practices</p>
+        </div>
+        <a class="btn-outline" href="contact.html" style="border-color:rgba(255,255,255,0.15); color:rgba(255,255,255,0.55);">Discuss your needs <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="services-grid">
+        <div class="service-row">
+          <div class="service-index">01</div>
+          <div class="service-name-col">
+            <h3>Business Strategy</h3>
+            <span class="service-tag">Direction</span>
+          </div>
+          <div class="service-desc-col">
+            <p>We help leadership teams in tech and life sciences build clear, executable strategy — not slide decks. From organizational goals deployment and quality system assessments to business reviews and site readiness, we connect vision to the operational reality of getting there.</p>
+          </div>
+          <div class="service-items-col">
+            <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Organizational goals deployment</div>
+            <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Strategy design & deployment</div>
+            <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Business & ops assessments</div>
+            <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Quality system assessments</div>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-index">02</div>
+          <div class="service-name-col">
+            <h3>Operations</h3>
+            <span class="service-tag">Execution</span>
+          </div>
+          <div class="service-desc-col">
+            <p>Deep operational expertise across GMP and non-GMP manufacturing, biotech process development, CDMO operations, and high-growth tech infrastructure. We speak FDA, TPS, and Kaizen fluently — and we bring that fluency into your facility, not just a slide deck.</p>
+          </div>
+          <div class="service-items-col">
+            <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Lean & TPS implementation</div>
+            <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Process improvement & OpEx</div>
+            <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Data analytics & dashboards</div>
+            <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>KPI & metrics development</div>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-index">03</div>
+          <div class="service-name-col">
+            <h3>Management Consulting</h3>
+            <span class="service-tag">Capability</span>
+          </div>
+          <div class="service-desc-col">
+            <p>We don't just advise — we build the management capability to sustain results. Using proven methodologies including A3 problem solving, PDCA, and Kaizen, we coach leaders, embed management systems, and transfer the institutional knowledge your team needs to operate independently at a higher level.</p>
+          </div>
+          <div class="service-items-col">
+            <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Leadership & team coaching</div>
+            <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Management system design</div>
+            <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Advanced problem-solving training</div>
+            <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Value stream mapping</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- INDUSTRIES -->
+  <section class="industries-section">
+    <div class="industries-inner">
+      <div>
+        <div class="eyebrow">Where we focus</div>
+        <p class="display" style="font-size: clamp(28px, 3.5vw, 44px); margin-top: 14px;">Built for two of the most<br>demanding industries on earth.</p>
+      </div>
+      <div class="industries-grid">
+        <div class="industry-card">
+          <div class="industry-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-4 9a1 1 0 0 0 .9 1.4h10.2a1 1 0 0 0 .9-1.4l-4-9V3"/></svg></div>
+          <h3>Life Sciences</h3>
+          <p>Biotech, pharmaceutical, and medical device organizations face a unique intersection of scientific complexity, regulatory pressure, and operational scale. Our founders have spent decades in this environment — from clinical manufacturing to commercial launch — and understand the constraints that generic consultants don't.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>Technology</h3>
+          <p>High-growth tech companies often scale faster than their operational infrastructure can support. We bring the rigorous systems thinking of world-class manufacturing to the speed and ambiguity of tech — helping teams build processes, metrics, and management systems that actually hold up under pressure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- PROBLEM -->
   <section class="problem-section">
@@ -554,6 +645,7 @@ footer {
       </div>
     </div>
   </section>
+
 
   <!-- AI DIFFERENTIATION BANNER -->
   <div class="ai-banner">
@@ -606,7 +698,7 @@ footer {
             <span class="service-tag">Direction</span>
           </div>
           <div class="service-desc-col">
-            <p>We help leadership teams in tech and life sciences build clear, executable strategy — not slide decks. From organizational goal-setting to market positioning, we connect vision to the operational reality of getting there.</p>
+            <p>We help leadership teams in tech and life sciences build clear, executable strategy — not slide decks. From organizational goals deployment and quality system assessments to business reviews and site readiness, we connect vision to the operational reality of getting there.</p>
           </div>
           <div class="service-items-col">
             <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Organizational goals deployment</div>
@@ -622,7 +714,7 @@ footer {
             <span class="service-tag">Execution</span>
           </div>
           <div class="service-desc-col">
-            <p>Deep operational expertise across GMP manufacturing, biotech process development, and high-growth tech infrastructure. We bring the domain fluency to see what's broken and the hands-on experience to fix it.</p>
+            <p>Deep operational expertise across GMP and non-GMP manufacturing, biotech process development, CDMO operations, and high-growth tech infrastructure. We speak FDA, TPS, and Kaizen fluently — and we bring that fluency into your facility, not just a slide deck.</p>
           </div>
           <div class="service-items-col">
             <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Lean & TPS implementation</div>
@@ -638,7 +730,7 @@ footer {
             <span class="service-tag">Capability</span>
           </div>
           <div class="service-desc-col">
-            <p>We don't just advise — we build the management capability to sustain results. Coaching leaders, embedding systems, and transferring the institutional knowledge your team needs to operate independently at a higher level.</p>
+            <p>We don't just advise — we build the management capability to sustain results. Using proven methodologies including A3 problem solving, PDCA, and Kaizen, we coach leaders, embed management systems, and transfer the institutional knowledge your team needs to operate independently at a higher level.</p>
           </div>
           <div class="service-items-col">
             <div class="svc-item"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>Leadership & team coaching</div>
@@ -716,6 +808,129 @@ footer {
       </div>
     </div>
   </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="nav-logo" href="index.html" style="text-decoration:none; margin-bottom:0;">
+          <div class="logo-mark">
+            <img src="logo.jpg" alt="Adareus logo" style="width:34px;height:34px;display:block;" />
+          </div>
+          <span class="logo-wordmark">ADAREUS</span>
+        </a>
+        <p class="footer-tagline">Improvement Accelerated. The expertise no algorithm can replace.</p>
+      </div>
+      <div>
+        <div class="footer-col-label">Navigation</div>
+        <div class="footer-links-list">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-label">Practices</div>
+        <div class="footer-links-list">
+          <a href="contact.html">Business Strategy</a>
+          <a href="contact.html">Operations</a>
+          <a href="contact.html">Management Consulting</a>
+        </div>
+      </div>
+    </div>
+<!-- AI DIFFERENTIATION BANNER -->
+  <div class="ai-banner">
+    <div class="ai-banner-inner">
+      <div class="ai-banner-left">
+        <div class="eyebrow">Why Adareus</div>
+        <h2>The expertise no algorithm<br>can <em>replace.</em></h2>
+      </div>
+      <div class="ai-dividers">
+        <div class="ai-point">
+          <div class="ai-point-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 2.5-1.3 4.7-3.3 6L15 17H9l-.7-2C6.3 13.7 5 11.5 5 9a7 7 0 0 1 7-7z"/></svg></div>
+          <div>
+            <h4>Domain knowledge takes decades</h4>
+            <p>Our founders spent 30+ years inside Toyota, Amgen, FUJIFILM, and Atara. That context can't be prompted into existence — it's earned through real decisions with real consequences.</p>
+          </div>
+        </div>
+        <div class="ai-point">
+          <div class="ai-point-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div>
+            <h4>We see what the data doesn't say</h4>
+            <p>The most critical insights in operations and strategy live in organizational dynamics, unspoken constraints, and institutional knowledge — not in dashboards.</p>
+          </div>
+        </div>
+        <div class="ai-point">
+          <div class="ai-point-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div>
+            <h4>Capability is built person to person</h4>
+            <p>Lasting improvement requires trust, coaching, and judgment applied in the room. That's why we embed with your team — not just advise from the outside.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPROACH -->
+  <section class="approach-section">
+    <div class="approach-inner">
+      <div class="approach-grid">
+        <div class="approach-left">
+          <div class="eyebrow">Our approach</div>
+          <p class="display">From theory to application</p>
+          <p>We engage an instructional approach that translates knowledge into lasting capability — working alongside your teams at every step. We don't hand over a report and leave. We build the capacity inside your organization to sustain improvement permanently.</p>
+          <a class="btn-dark" href="contact.html">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <div class="approach-steps">
+          <div class="approach-step">
+            <div class="step-num">01</div>
+            <div class="step-body">
+              <h4>Assess & diagnose</h4>
+              <p>Deep evaluation of your strategy, operations, and systems — informed by genuine domain expertise, not just frameworks.</p>
+            </div>
+          </div>
+          <div class="approach-step">
+            <div class="step-num">02</div>
+            <div class="step-body">
+              <h4>Design solutions</h4>
+              <p>Evidence-based recommendations customized to your organization. Not generic best practices — contextual judgment built on 30 years in the field.</p>
+            </div>
+          </div>
+          <div class="approach-step">
+            <div class="step-num">03</div>
+            <div class="step-body">
+              <h4>Build capability</h4>
+              <p>We train, coach, and work alongside your teams to embed new skills and behaviors that outlast the engagement.</p>
+            </div>
+          </div>
+          <div class="approach-step">
+            <div class="step-num">04</div>
+            <div class="step-body">
+              <h4>Measure & accelerate</h4>
+              <p>Measurable goals and KPIs ensure accountability at every level — with results you can see, track, and build on.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--ink); padding:80px 56px; text-align:center;">
+    <div class="eyebrow" style="color:var(--gold); justify-content:center; margin-bottom:16px;">Start the conversation</div>
+    <p style="
+      font-family:'Barlow','Arial Narrow',Arial,sans-serif;
+      font-size:clamp(28px,4vw,48px); font-weight:800;
+      letter-spacing:-0.5px; color:var(--white); margin-bottom:16px; line-height:1.1;
+    ">Ready to accelerate<br><span style="color:var(--gold);">your organization?</span></p>
+    <p style="font-size:15px; font-weight:300; color:rgba(255,255,255,0.5); max-width:440px; margin:0 auto 36px; line-height:1.8;">
+      Tell us about your challenge. We respond within 24–48 hours and will tailor a path forward to your specific situation.
+    </p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a class="btn-dark" href="contact.html" style="background:var(--gold); color:var(--ink); font-weight:600;">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a class="btn-outline" href="about.html" style="border-color:rgba(255,255,255,0.2); color:rgba(255,255,255,0.6);">Meet the team</a>
+    </div>
+  </section>
+
 
   <footer>
     <div class="footer-top">
