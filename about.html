@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — ADAREUS</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/iconfont/tabler-icons.min.css" />
+  <style>
+    /* ── PAGE HERO ── */
+    .page-hero {
+      padding: 100px 64px 80px;
+      border-bottom: 1px solid var(--border);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end;
+    }
+    .page-hero-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(40px, 5vw, 68px);
+      font-weight: 700; line-height: 1.0; letter-spacing: -1.5px;
+      margin-top: 20px;
+    }
+    .page-hero-title span { color: var(--accent); }
+    .page-hero-right { padding-bottom: 6px; }
+    .page-hero-sub {
+      font-size: 15px; font-weight: 300; line-height: 1.85;
+      color: var(--text-light); margin-bottom: 28px;
+    }
+    .page-hero-meta {
+      display: flex; gap: 32px; padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .meta-item {}
+    .meta-num {
+      font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 700;
+      color: var(--accent); line-height: 1; margin-bottom: 4px;
+    }
+    .meta-label { font-size: 11px; color: var(--muted); letter-spacing: 0.5px; }
+
+    /* ── COMPANY STORY ── */
+    .story-section {
+      padding: 100px 64px;
+      border-bottom: 1px solid var(--border);
+      display: grid; grid-template-columns: 280px 1fr; gap: 80px;
+    }
+    .story-sticky {
+      position: sticky; top: 96px; align-self: start;
+    }
+    .story-sticky-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 22px; font-weight: 700; margin-top: 16px; margin-bottom: 20px;
+    }
+    .story-sticky-sub { font-size: 13px; font-weight: 300; color: var(--text-light); line-height: 1.75; }
+    .story-body { display: flex; flex-direction: column; gap: 48px; }
+    .story-block {}
+    .story-block h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px; font-weight: 600; margin-bottom: 14px; color: var(--white);
+    }
+    .story-block p {
+      font-size: 14px; font-weight: 300; line-height: 1.85; color: var(--text-light);
+    }
+    .story-block p + p { margin-top: 14px; }
+
+    /* ── VALUES ── */
+    .values-section {
+      padding: 100px 64px;
+      border-bottom: 1px solid var(--border);
+    }
+    .values-header { margin-bottom: 56px; }
+    .values-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 32px; font-weight: 700; letter-spacing: -0.3px; margin-top: 16px;
+    }
+    .values-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--border);
+    }
+    .value-card {
+      padding: 40px 28px;
+      border-right: 1px solid var(--border);
+    }
+    .value-card:last-child { border-right: none; }
+    .value-icon {
+      width: 36px; height: 36px; border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-size: 17px; margin-bottom: 20px;
+    }
+    .value-card h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 14px; font-weight: 600; margin-bottom: 10px; line-height: 1.3;
+    }
+    .value-card p { font-size: 12.5px; font-weight: 300; color: var(--text-light); line-height: 1.7; }
+
+    /* ── TEAM ── */
+    .team-section {
+      padding: 100px 64px;
+      border-bottom: 1px solid var(--border);
+    }
+    .team-header { margin-bottom: 64px; }
+    .team-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 32px; font-weight: 700; letter-spacing: -0.3px; margin-top: 16px;
+    }
+
+    .founder-block {
+      display: grid; grid-template-columns: 1fr 2fr;
+      border-top: 1px solid var(--border);
+      padding: 64px 0;
+      gap: 80px;
+    }
+    .founder-block:last-child { border-bottom: 1px solid var(--border); }
+    .founder-left {}
+    .founder-avatar {
+      width: 80px; height: 80px; border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700;
+      color: var(--accent); margin-bottom: 24px;
+    }
+    .founder-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px; font-weight: 700; margin-bottom: 4px;
+    }
+    .founder-role { font-size: 12px; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+    .founder-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .ftag {
+      font-size: 10.5px; padding: 4px 10px;
+      border: 1px solid var(--border); color: var(--muted);
+      letter-spacing: 0.5px;
+    }
+    .founder-right {}
+    .founder-bio {
+      font-size: 14px; font-weight: 300; line-height: 1.9;
+      color: var(--text-light); margin-bottom: 28px;
+    }
+    .founder-bio p + p { margin-top: 14px; }
+    .founder-highlights {
+      display: flex; flex-direction: column; gap: 0;
+      border: 1px solid var(--border);
+    }
+    .highlight {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 16px 20px; border-bottom: 1px solid var(--border);
+    }
+    .highlight:last-child { border-bottom: none; }
+    .highlight i { color: var(--accent); font-size: 14px; padding-top: 2px; flex-shrink: 0; }
+    .highlight span { font-size: 13px; color: var(--muted); }
+
+    /* ── CTA ── */
+    .about-cta {
+      padding: 100px 64px;
+      display: flex; align-items: center; justify-content: space-between; gap: 40px;
+    }
+    .about-cta-left {}
+    .about-cta-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 36px; font-weight: 700; letter-spacing: -0.5px;
+      margin-top: 16px; line-height: 1.1;
+    }
+    .about-cta-title span { color: var(--accent); }
+    .about-cta-sub {
+      font-size: 14px; font-weight: 300; color: var(--text-light);
+      margin-top: 16px; max-width: 440px; line-height: 1.75;
+    }
+
+    @media (max-width: 860px) {
+      .page-hero, .story-section, .founder-block, .about-cta { grid-template-columns: 1fr; gap: 40px; padding: 64px 24px; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .value-card:nth-child(2) { border-right: none; }
+      .value-card { border-bottom: 1px solid var(--border); }
+      .values-section, .team-section { padding: 64px 24px; }
+      .story-sticky { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="logo-mark">
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 1L15 13H1L8 1Z" stroke="#c8a96e" stroke-width="1.2" stroke-linejoin="round"/>
+        <path d="M5 10H11" stroke="#c8a96e" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="logo-wordmark">ADAREUS</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div>
+      <div class="eyebrow fu d1">About Adareus</div>
+      <h1 class="page-hero-title fu d2">Built by operators,<br><span>for operators.</span></h1>
+    </div>
+    <div class="page-hero-right fu d3">
+      <p class="page-hero-sub">Adareus was founded by three industry veterans who spent decades inside the organizations they now help transform. We know the complexity firsthand — because we lived it.</p>
+      <div class="page-hero-meta">
+        <div class="meta-item">
+          <div class="meta-num">2024</div>
+          <div class="meta-label">Founded</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-num">SoCal</div>
+          <div class="meta-label">Headquartered</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-num">6+</div>
+          <div class="meta-label">Industries served</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-num">3</div>
+          <div class="meta-label">Co-founders</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <div class="story-section">
+    <div class="story-sticky">
+      <div class="eyebrow">Our story</div>
+      <div class="story-sticky-title">Where we come from</div>
+      <p class="story-sticky-sub">Decades in the field shaped how we work. We don't approach organizations from the outside — we approach them as fellow operators.</p>
+    </div>
+    <div class="story-body">
+      <div class="story-block">
+        <h3>Founded on a shared frustration</h3>
+        <p>After decades leading operations at some of the most demanding organizations in life sciences, biotech, and manufacturing, our three co-founders shared a common observation: most consulting engagements produce great recommendations that go nowhere.</p>
+        <p>The problem wasn't the strategy. It was the gap between knowing and doing — between receiving a report and actually building the capability to execute it.</p>
+      </div>
+      <div class="story-block">
+        <h3>A different model</h3>
+        <p>Adareus was built to close that gap. We combine the rigor of evidence-based strategy with an instructional, hands-on approach that embeds new skills and systems directly inside your organization.</p>
+        <p>We work across the full spectrum — from organizational goal-setting and quality systems to lean manufacturing and data visualization — because real operational improvement rarely lives in just one function.</p>
+      </div>
+      <div class="story-block">
+        <h3>Improvement Accelerated</h3>
+        <p>Our tagline isn't a marketing phrase. It's a commitment. Every engagement is built around measurable goals, defined timelines, and genuine knowledge transfer. We measure success not by deliverables handed over, but by capability built within.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VALUES -->
+  <div class="values-section">
+    <div class="values-header">
+      <div class="eyebrow">How we operate</div>
+      <div class="values-title">Our values</div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon"><i class="ti ti-users" aria-hidden="true"></i></div>
+        <h4>People first, always</h4>
+        <p>We believe operational excellence begins and ends with the people inside the system. Every recommendation accounts for how real humans work.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="ti ti-chart-line" aria-hidden="true"></i></div>
+        <h4>Measurable accountability</h4>
+        <p>We set challenging, specific goals and track them against clear metrics. Vague improvements aren't improvements at all.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="ti ti-bulb" aria-hidden="true"></i></div>
+        <h4>Evidence over opinion</h4>
+        <p>Every recommendation is grounded in data, validated frameworks, and decades of applied experience — not trends or assumptions.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="ti ti-school" aria-hidden="true"></i></div>
+        <h4>Capability transfer</h4>
+        <p>We translate our expertise into your team's skills. The goal is an organization that can sustain and extend improvements without us.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <div class="team-section">
+    <div class="team-header">
+      <div class="eyebrow">Leadership</div>
+      <div class="team-title">The co-founders</div>
+    </div>
+
+    <!-- Keith Kato -->
+    <div class="founder-block">
+      <div class="founder-left">
+        <div class="founder-avatar">KK</div>
+        <div class="founder-name">Keith Kato</div>
+        <div class="founder-role">Co-Founder</div>
+        <div class="founder-tags">
+          <span class="ftag">Life Sciences</span>
+          <span class="ftag">GMP Ops</span>
+          <span class="ftag">IMS</span>
+          <span class="ftag">Supply Chain</span>
+          <span class="ftag">OpEx</span>
+        </div>
+      </div>
+      <div class="founder-right">
+        <div class="founder-bio">
+          <p>Keith brings more than 20 years of expertise in operations management across life sciences, specialty retail, and aerospace. Most recently, he served as Vice President of Operations at FUJIFILM Diosynth Biotechnologies, where he led site operations for a leading contract development and manufacturing organization.</p>
+          <p>Prior to FDB, Keith was responsible for leading operations at Atara Biotherapeutics' CDMO to improve GMP compliance and ensure clinical supply. As VP of Technical Operations, he spearheaded the Atara COVID-19 program, built out a 33,000 square foot research facility, and ensured a successful EU pre-approval inspection.</p>
+          <p>Keith has held key leadership positions at Alexion and Amgen, and earlier in his career led production operations at Blue Nile and served as Team Lead at Honeywell. He holds a BA from UC Berkeley and an MBA from USC.</p>
+        </div>
+        <div class="founder-highlights">
+          <div class="highlight">
+            <i class="ti ti-award"></i>
+            <span>Gold Medal — International Business Awards® Most Valuable Corporate Response to COVID-19</span>
+          </div>
+          <div class="highlight">
+            <i class="ti ti-award"></i>
+            <span>Amgen Excellence in Operations Award · Pentair Site Excellence Award</span>
+          </div>
+          <div class="highlight">
+            <i class="ti ti-building"></i>
+            <span>FUJIFILM Diosynth Biotechnologies · Atara Biotherapeutics · Alexion · Amgen · Honeywell</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Daniel Lee -->
+    <div class="founder-block">
+      <div class="founder-left">
+        <div class="founder-avatar">DL</div>
+        <div class="founder-name">Daniel Lee</div>
+        <div class="founder-role">Co-Founder</div>
+        <div class="founder-tags">
+          <span class="ftag">Biotech</span>
+          <span class="ftag">QA / QC</span>
+          <span class="ftag">OpEx</span>
+          <span class="ftag">Analytics</span>
+          <span class="ftag">Cell Therapy</span>
+        </div>
+      </div>
+      <div class="founder-right">
+        <div class="founder-bio">
+          <p>Daniel brings more than 17 years of multi-disciplinary experience in the life sciences industry to Adareus, including in internal and external manufacturing, CDMO, quality assurance and control, supply chain, and operational excellence. He most recently served as Head of Operational Excellence at Atara Biotherapeutics.</p>
+          <p>Prior to Atara, Daniel held roles of increasing responsibility at Alexion, Amgen, and earlier in his career, Allergan. He was responsible for manufacturing monoclonal antibodies, managed HPLC analytical testing of Allergan's BOTOX®, and was the launch lead in the JAPAC region for multiple Amgen products.</p>
+          <p>Daniel's expertise centers on driving business performance through applied analytics, Management Systems for Operations, and Quality Management Systems across multiple biotechnology manufacturing sites. He holds a BS in Biochemistry and Cell Biology from UC San Diego and an MBS from Keck Graduate Institute.</p>
+        </div>
+        <div class="founder-highlights">
+          <div class="highlight">
+            <i class="ti ti-award"></i>
+            <span>First Prize — 18th Annual International Business Awards® Most Valuable Corporate Response to COVID-19</span>
+          </div>
+          <div class="highlight">
+            <i class="ti ti-building"></i>
+            <span>Atara Biotherapeutics · Alexion · Amgen · Allergan</span>
+          </div>
+          <div class="highlight">
+            <i class="ti ti-flask"></i>
+            <span>Allogeneic cell therapy · Monoclonal antibody manufacturing · FDA 483 remediation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Robert Uyekawa -->
+    <div class="founder-block">
+      <div class="founder-left">
+        <div class="founder-avatar">RU</div>
+        <div class="founder-name">Robert Uyekawa</div>
+        <div class="founder-role">Co-Founder</div>
+        <div class="founder-tags">
+          <span class="ftag">TPS / Lean</span>
+          <span class="ftag">Toyota</span>
+          <span class="ftag">Kaizen</span>
+          <span class="ftag">Multi-industry</span>
+        </div>
+      </div>
+      <div class="founder-right">
+        <div class="founder-bio">
+          <p>Robert brings more than 30 years of expertise across life sciences, automotive, aerospace, construction, and food industries. He is widely recognized as a Toyota Production System and Lean expert, having begun his career at Toyota Motor Sales, USA — where he received specialized on-the-job training in Japan in project management, tooling, and production operations.</p>
+          <p>At Toyota, Robert held key roles in manufacturing, quality, supply chain, and supplier development. Over the past 15 years, he has partnered with leading organizations to implement TPS philosophy and continuous improvement practices across biotechnology, medical devices, aerospace, automotive, and food sectors.</p>
+          <p>His work has enabled clients to make significant, measurable enhancements to business performance — building the internal discipline required to sustain and extend improvement over time. He holds a BS from Cal Poly Pomona.</p>
+        </div>
+        <div class="founder-highlights">
+          <div class="highlight">
+            <i class="ti ti-building"></i>
+            <span>Toyota Motor Sales, USA — trained in Japan in TPS, project management, and production operations</span>
+          </div>
+          <div class="highlight">
+            <i class="ti ti-briefcase"></i>
+            <span>Clients in biotech, medical devices, aerospace, automotive, food, and consumer products</span>
+          </div>
+          <div class="highlight">
+            <i class="ti ti-tools"></i>
+            <span>Pull system (Kanban) · Value stream mapping · Advanced problem-solving · Supplier development</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT CTA -->
+  <div class="about-cta">
+    <div class="about-cta-left">
+      <div class="eyebrow">Work with us</div>
+      <div class="about-cta-title">Ready to build<br><span>something lasting?</span></div>
+      <p class="about-cta-sub">Tell us about your organization and the challenges you're facing. We'll respond within 24–48 hours.</p>
+    </div>
+    <a class="btn-primary" href="contact.html" style="white-space:nowrap;">Get in Touch <i class="ti ti-arrow-right"></i></a>
+  </div>
+
+  <footer>
+    <a class="nav-logo" href="index.html" style="text-decoration:none;">
+      <div class="logo-mark" style="width:28px;height:28px;">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:13px;height:13px;">
+          <path d="M8 1L15 13H1L8 1Z" stroke="#c8a96e" stroke-width="1.2" stroke-linejoin="round"/>
+          <path d="M5 10H11" stroke="#c8a96e" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="logo-wordmark">ADAREUS</span>
+    </a>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a class="social-link" href="https://www.linkedin.com/company/adareus" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="ti ti-brand-linkedin"></i>
+      </a>
+      <span class="footer-copy">© 2025 Adareus · All rights reserved</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
