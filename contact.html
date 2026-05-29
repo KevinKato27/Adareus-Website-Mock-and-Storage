@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — ADAREUS</title>
   <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
 
 
@@ -512,7 +513,7 @@ nav .nav-links a { font-size: 13px; }
     .story-blocks { display: flex; flex-direction: column; }
     .story-block { padding: 36px 0; border-bottom: 1px solid var(--border); }
     .story-block:first-child { padding-top: 0; }
-    .story-block h3 { font-size: 17px; font-weight: 600; margin-bottom: 12px; }
+    .story-block h3 { font-size: 17px; font-weight: 700; margin-bottom: 12px; color: var(--ink); padding-left: 16px; border-left: 3px solid var(--gold); }
     .story-block p { font-size: 14px; font-weight: 300; color: var(--text-body); line-height: 1.85; }
     .story-block p + p { margin-top: 12px; }
 
@@ -783,10 +784,112 @@ nav .nav-links a { font-size: 13px; }
       .service-row:hover { margin: 0; padding: 44px 0; }
       .approach-grid, .industries-grid { grid-template-columns: 1fr; }
     }
+  
+
+/* ── Contact page ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+  align-items: start;
+}
+.contact-details { display: flex; flex-direction: column; gap: 0; }
+.contact-detail {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 20px 0; border-bottom: 1px solid var(--border);
+}
+.contact-detail:first-child { padding-top: 0; }
+.detail-icon {
+  width: 38px; height: 38px; background: var(--ink);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.detail-label { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
+.detail-value { font-size: 14px; font-weight: 400; color: var(--ink); }
+.detail-value a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--border); }
+.detail-value a:hover { border-color: var(--gold); color: var(--gold); }
+.response-box {
+  margin-top: 28px; padding: 20px 22px;
+  background: var(--cream); border-radius: var(--radius-md);
+  border: 1px solid var(--border-mid);
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.response-box svg { flex-shrink: 0; margin-top: 2px; }
+.response-box p { font-size: 13px; font-weight: 300; color: var(--text-body); line-height: 1.7; margin: 0; }
+.form-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 40px 40px;
+}
+.form-card h2 { font-family: 'Barlow','Arial Narrow',Arial,sans-serif; font-size: 24px; font-weight: 800; color: var(--ink); margin-bottom: 8px; }
+.form-intro { font-size: 14px; font-weight: 300; color: var(--text-body); margin-bottom: 28px; }
+.form-fields { display: flex; flex-direction: column; gap: 18px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-label { font-size: 12px; font-weight: 600; letter-spacing: 0.5px; color: var(--text-muted); text-transform: uppercase; }
+.form-input, .form-select, .form-textarea {
+  width: 100%; padding: 11px 14px;
+  background: var(--off-white); border: 1px solid var(--border-mid);
+  border-radius: var(--radius-sm); font-family: inherit;
+  font-size: 14px; font-weight: 300; color: var(--ink);
+  outline: none; transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--gold); background: var(--white);
+}
+.form-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237a8f9e' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  appearance: none; -webkit-appearance: none;
+}
+.form-textarea { resize: vertical; min-height: 100px; }
+.form-check { display: flex; gap: 10px; align-items: flex-start; }
+.form-check input { margin-top: 3px; flex-shrink: 0; accent-color: var(--gold); }
+.form-check label { font-size: 12px; font-weight: 300; color: var(--text-muted); line-height: 1.6; }
+.form-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.form-note { font-size: 12px; color: var(--text-muted); }
+.btn-submit {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--ink); color: var(--white);
+  padding: 12px 24px; border-radius: var(--radius-sm);
+  font-family: 'Barlow','Arial Narrow',Arial,sans-serif;
+  font-size: 14px; font-weight: 700; letter-spacing: 0.5px;
+  border: none; cursor: pointer; transition: background 0.15s;
+}
+.btn-submit:hover { background: var(--ink-mid); }
+.form-success {
+  display: none; text-align: center;
+  padding: 40px 20px;
+}
+.form-success.visible { display: block; }
+.success-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--gold-dim); border: 1px solid var(--gold-line);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+}
+.success-title { font-family: 'Barlow','Arial Narrow',Arial,sans-serif; font-size: 22px; font-weight: 800; color: var(--ink); margin-bottom: 10px; }
+.success-sub { font-size: 14px; font-weight: 300; color: var(--text-body); line-height: 1.7; }
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-footer { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .form-card { padding: 28px 20px; }
+}
+
   </style>
+  <script>
+    function handleSubmit() {
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('form-success').classList.add('visible');
+    }
+  </script>
 </head>
 <body>
-
 <nav>
   <a class="nav-logo" href="index.html">
     <div class="logo-mark"><img src="logo.jpg" alt="Adareus logo" style="width:34px;height:34px;display:block;" /></div>
@@ -796,161 +899,110 @@ nav .nav-links a { font-size: 13px; }
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="story.html">Our story</a>
+    <a href="values.html">Values</a>
     <a href="about.html">About</a>
     <a href="contact.html" class="active">Contact</a>
   </div>
   <a class="nav-cta" href="contact.html">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
 </nav>
-
 <div class="page">
-
   <!-- HERO -->
-  <section style="border-bottom: 1px solid var(--border);">
-    <div style="max-width:1160px; margin:0 auto; padding:64px 56px 64px;">
+  <section style="border-bottom:1px solid var(--border);">
+    <div style="max-width:1160px; margin:0 auto; padding:64px 56px;">
       <div class="eyebrow fu d1">Get in touch</div>
-      <h1 style="
-        font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
-        font-size: clamp(48px, 6vw, 80px); font-weight: 800;
-        line-height: 0.95; letter-spacing: -0.5px;
-        color: var(--ink); margin: 20px 0 0;
-      " class="fu d2">Let's talk about<br><em style="font-style:normal; color:var(--gold);">your organization.</em></h1>
-      <div style="
-        display:grid; grid-template-columns:1fr 1fr; gap:64px;
-        padding-top:40px; border-top:1px solid var(--border); margin-top:40px;
-      " class="fu d3">
-        <p style="font-size:15px; font-weight:300; color:var(--text-body); line-height:1.85;">
-          Whether you're facing an operational challenge, planning a strategic shift, or exploring what improvement looks like for your business — we want to hear about it.
-        </p>
+      <h1 style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:clamp(44px,6vw,72px); font-weight:800; line-height:0.95; letter-spacing:-0.5px; color:var(--ink); margin:20px 0 0;" class="fu d2">Let's talk about<br><em style="font-style:normal; color:var(--gold);">your organization.</em></h1>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; padding-top:40px; border-top:1px solid var(--border); margin-top:40px;" class="fu d3">
+        <p style="font-size:15px; font-weight:300; color:var(--text-body); line-height:1.85;">Whether you're facing an operational challenge, planning a strategic shift, or exploring what improvement looks like — we want to hear about it.</p>
         <div style="display:flex; gap:40px; align-items:flex-end; flex-wrap:wrap;">
-          <div>
-            <div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:28px; font-weight:700; color:var(--ink); line-height:1; margin-bottom:4px;">24–48h</div>
-            <div style="font-size:11.5px; color:var(--text-muted);">Response time</div>
-          </div>
-          <div>
-            <div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:28px; font-weight:700; color:var(--ink); line-height:1; margin-bottom:4px;">SoCal</div>
-            <div style="font-size:11.5px; color:var(--text-muted);">Headquartered</div>
-          </div>
-          <div>
-            <div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:28px; font-weight:700; color:var(--ink); line-height:1; margin-bottom:4px;">Est. 2024</div>
-            <div style="font-size:11.5px; color:var(--text-muted);">Founded</div>
-          </div>
+          <div><div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:28px; font-weight:800; color:var(--ink); line-height:1; margin-bottom:4px;">24–48h</div><div style="font-size:11px; color:var(--text-muted);">Response time</div></div>
+          <div><div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:28px; font-weight:800; color:var(--ink); line-height:1; margin-bottom:4px;">SoCal</div><div style="font-size:11px; color:var(--text-muted);">Headquartered</div></div>
+          <div><div style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:28px; font-weight:800; color:var(--ink); line-height:1; margin-bottom:4px;">Est. 2024</div><div style="font-size:11px; color:var(--text-muted);">Founded</div></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT GRID -->
-  <section style="padding:80px 56px; border-bottom:1px solid var(--border); max-width:1160px; margin:0 auto;">
-    <div class="contact-grid">
+  <section style="padding:80px 56px; border-bottom:1px solid var(--border);">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div class="contact-grid">
 
-      <!-- LEFT — details -->
-      <div class="fu d2">
-        <div class="eyebrow" style="margin-bottom:16px;">Contact details</div>
-        <div class="contact-details">
-          <div class="contact-detail">
-            <div class="detail-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div>
-              <div class="detail-label">Headquarters</div>
-              <div class="detail-value">Southern California, USA</div>
+        <div>
+          <div class="eyebrow" style="margin-bottom:20px;">Contact details</div>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="detail-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><div class="detail-label">Headquarters</div><div class="detail-value">Southern California, USA</div></div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+              <div><div class="detail-label">LinkedIn</div><div class="detail-value"><a href="https://www.linkedin.com/company/adareus" target="_blank" rel="noopener">linkedin.com/company/adareus</a></div></div>
             </div>
           </div>
-          <div class="contact-detail">
-            <div class="detail-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-            <div>
-              <div class="detail-label">LinkedIn</div>
-              <div class="detail-value"><a href="https://www.linkedin.com/company/adareus" target="_blank" rel="noopener">linkedin.com/company/adareus</a></div>
-            </div>
+          <div class="response-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <p>We respond to all inquiries within 24–48 business hours. For complex engagements, we'll schedule a discovery call before proposing a path forward.</p>
           </div>
-          <div class="contact-detail">
-            <div class="detail-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-            <div>
-              <div class="detail-label">Website</div>
-              <div class="detail-value"><a href="https://adareus.com" target="_blank" rel="noopener">adareus.com</a></div>
+        </div>
+
+        <div>
+          <div class="form-card">
+            <h2>Send a message</h2>
+            <p class="form-intro">Tell us about your needs and we'll be in touch shortly.</p>
+            <div id="contact-form">
+              <div class="form-fields">
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label" for="fname">First name</label><input class="form-input" type="text" id="fname" placeholder="Jane" /></div>
+                  <div class="form-group"><label class="form-label" for="lname">Last name</label><input class="form-input" type="text" id="lname" placeholder="Smith" /></div>
+                </div>
+                <div class="form-group"><label class="form-label" for="email">Work email *</label><input class="form-input" type="email" id="email" placeholder="jane@company.com" /></div>
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label" for="company">Organization</label><input class="form-input" type="text" id="company" placeholder="Company name" /></div>
+                  <div class="form-group"><label class="form-label" for="jobtitle">Your title</label><input class="form-input" type="text" id="jobtitle" placeholder="VP of Operations" /></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="service">Area of interest</label>
+                  <select class="form-select" id="service">
+                    <option value="" disabled selected>Select a focus area</option>
+                    <option>Business strategy</option>
+                    <option>Operations</option>
+                    <option>Management consulting</option>
+                    <option>Multiple areas / Not sure yet</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="industry">Your industry</label>
+                  <select class="form-select" id="industry">
+                    <option value="" disabled selected>Select your industry</option>
+                    <option>Life Sciences / Biotech</option>
+                    <option>Pharma / CDMO</option>
+                    <option>Medical Devices</option>
+                    <option>Cell &amp; Gene Therapy</option>
+                    <option>Technology / SaaS</option>
+                    <option>Hardware / Deep Tech</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group"><label class="form-label" for="message">Tell us about your challenge</label><textarea class="form-textarea" id="message" placeholder="Briefly describe what you're working through — the more context, the better we can help."></textarea></div>
+                <div class="form-check">
+                  <input type="checkbox" id="consent" />
+                  <label for="consent">I agree to be contacted by Adareus regarding my inquiry. We do not share your information with third parties.</label>
+                </div>
+                <div class="form-footer">
+                  <span class="form-note">* Required field</span>
+                  <button class="btn-submit" onclick="handleSubmit()">Send message <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+                </div>
+              </div>
+            </div>
+            <div class="form-success" id="form-success">
+              <div class="success-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="success-title">Message received</div>
+              <p class="success-sub">Thank you for reaching out. A member of the Adareus team will be in touch within 24–48 business hours.</p>
             </div>
           </div>
         </div>
-        <div class="response-box" style="margin-top:32px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <p>We respond to all inquiries within 24–48 business hours. For complex engagements, we'll schedule a discovery call before proposing a path forward.</p>
-        </div>
+
       </div>
-
-      <!-- RIGHT — form -->
-      <div class="fu d3">
-        <div class="form-card">
-          <h2>Send a message</h2>
-          <p class="form-intro">Tell us about your needs and we'll be in touch shortly.</p>
-          <div id="contact-form">
-            <div class="form-fields">
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label" for="fname">First name</label>
-                  <input class="form-input" type="text" id="fname" placeholder="Jane" />
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="lname">Last name</label>
-                  <input class="form-input" type="text" id="lname" placeholder="Smith" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="email">Work email *</label>
-                <input class="form-input" type="email" id="email" placeholder="jane@company.com" />
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label" for="company">Organization</label>
-                  <input class="form-input" type="text" id="company" placeholder="Company name" />
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="jobtitle">Your title</label>
-                  <input class="form-input" type="text" id="jobtitle" placeholder="VP of Operations" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="service">Area of interest</label>
-                <select class="form-select" id="service">
-                  <option value="" disabled selected>Select a focus area</option>
-                  <option>Business strategy</option>
-                  <option>Operations</option>
-                  <option>Management consulting</option>
-                  <option>Multiple areas / Not sure yet</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="industry">Your industry</label>
-                <select class="form-select" id="industry">
-                  <option value="" disabled selected>Select your industry</option>
-                  <option>Life Sciences / Biotech</option>
-                  <option>Pharma / CDMO</option>
-                  <option>Medical Devices</option>
-                  <option>Cell & Gene Therapy</option>
-                  <option>Technology / SaaS</option>
-                  <option>Hardware / Deep Tech</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="message">Tell us about your challenge</label>
-                <textarea class="form-textarea" id="message" placeholder="Briefly describe what you're working through — the more context, the better we can help."></textarea>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" id="consent" />
-                <label for="consent">I agree to be contacted by Adareus regarding my inquiry. We do not share your information with third parties.</label>
-              </div>
-              <div class="form-footer">
-                <span class="form-note">* Required field</span>
-                <button class="btn-submit" onclick="handleSubmit()">Send message <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
-              </div>
-            </div>
-          </div>
-          <div class="form-success" id="form-success">
-            <div class="success-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b8965a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="success-title">Message received</div>
-            <p class="success-sub">Thank you for reaching out. A member of the Adareus team will be in touch within 24–48 business hours.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
   <footer>
@@ -968,6 +1020,7 @@ nav .nav-links a { font-size: 13px; }
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
           <a href="story.html">Our story</a>
+          <a href="values.html">Values</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </div>
@@ -987,19 +1040,5 @@ nav .nav-links a { font-size: 13px; }
     </div>
   </footer>
 </div>
-
-<script>
-  function handleSubmit() {
-    var email = document.getElementById('email').value.trim();
-    if (!email) {
-      document.getElementById('email').focus();
-      document.getElementById('email').style.borderColor = '#b8965a';
-      return;
-    }
-    document.getElementById('contact-form').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-  }
-</script>
-
 </body>
 </html>
