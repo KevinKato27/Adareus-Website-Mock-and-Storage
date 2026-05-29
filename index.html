@@ -11,6 +11,22 @@
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; border: 0; outline: 0; }
 
+/* Font size increases */
+html { font-size: 17px; }
+body { font-size: 17px; }
+p { font-size: 16px; line-height: 1.9; }
+.hero-sub { font-size: 19px !important; line-height: 1.75 !important; }
+.story-block p { font-size: 16px !important; }
+.founder-bio p { font-size: 15px !important; }
+.service-desc-col p { font-size: 16px !important; }
+.step-body p { font-size: 15px !important; }
+.ai-point p { font-size: 15px !important; }
+.problem-card p { font-size: 15px !important; }
+nav .nav-links a { font-size: 14px; }
+.eyebrow { font-size: 11.5px !important; }
+.footer-links-list a { font-size: 14px; }
+.footer-tagline { font-size: 14px; }
+
 :root {
   --ink:         #0b1620;
   --ink-mid:     #122233;
@@ -387,12 +403,16 @@ nav .nav-links a { font-size: 13px; }
       background: var(--off-white);
     }
     .industries-inner { max-width: 1160px; margin: 0 auto; }
-    .industries-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
+    .industries-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; align-items: start; }
     .industry-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--radius-lg); padding: 40px 36px;
-      transition: border-color 0.25s, transform 0.25s;
+      background: var(--white); border: 1px solid var(--border-mid);
+      border-left: 4px solid var(--gold);
+      border-radius: var(--radius-md); padding: 36px 32px;
+      box-shadow: 0 4px 24px rgba(11,22,32,0.08);
+      transition: box-shadow 0.25s;
     }
+    .industry-card:hover { box-shadow: 0 8px 36px rgba(11,22,32,0.13); }
+    
     .industry-card:hover { border-color: var(--gold-line); transform: translateY(-3px); }
     .industry-card-icon {
       width: 44px; height: 44px; background: var(--ink);
@@ -720,15 +740,18 @@ nav .nav-links a { font-size: 13px; }
     .industries-section {
       padding: 80px 56px;
       border-bottom: 1px solid var(--border);
-      background: var(--off-white);
+      background: var(--ink-mid);
     }
     .industries-inner { max-width: 1160px; margin: 0 auto; }
-    .industries-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
+    .industries-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; align-items: start; }
     .industry-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--radius-lg); padding: 40px 36px;
-      transition: border-color 0.25s, transform 0.25s;
+      background: var(--white); border: 1px solid var(--border-mid);
+      border-left: 4px solid var(--gold);
+      border-radius: var(--radius-md); padding: 36px 32px;
+      box-shadow: 0 4px 24px rgba(11,22,32,0.08);
+      transition: box-shadow 0.25s;
     }
+    .industry-card:hover { box-shadow: 0 8px 36px rgba(11,22,32,0.13); }
     .industry-card:hover { border-color: var(--gold-line); transform: translateY(-3px); }
     .industry-card-icon {
       width: 44px; height: 44px; background: var(--ink);
@@ -880,58 +903,43 @@ nav .nav-links a { font-size: 13px; }
         </div>
         <a class="btn-outline" href="services.html" style="border-color:rgba(255,255,255,0.2); color:rgba(255,255,255,0.6); white-space:nowrap; flex-shrink:0;">Full details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
-
-      <!-- Three stacked rows -->
-      <div style="display:flex; flex-direction:column; gap:0; border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-lg); overflow:hidden;">
-
-        <div style="display:grid; grid-template-columns:260px 1fr; gap:0; border-bottom:1px solid rgba(255,255,255,0.08);">
-          <div style="padding:36px 32px; border-right:1px solid rgba(255,255,255,0.08);">
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+        <div style="border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-lg); overflow:hidden;">
+          <div style="padding:32px 28px; border-bottom:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.04);">
             <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:var(--gold); margin-bottom:12px;">01</div>
             <h3 style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:22px; font-weight:800; color:var(--white); margin-bottom:10px;">Business Strategy</h3>
-            <p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.5); line-height:1.7; margin:0;">Clear, executable strategy that connects vision to operational reality.</p>
+            <p style="font-size:13.5px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.7; margin:0;">Organizational goals deployment, strategy design, and business assessments that connect vision to operational reality.</p>
           </div>
-          <div style="padding:36px 32px; display:grid; grid-template-columns:1fr 1fr; gap:16px 32px;">
-            <div><div style="font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">Organizational Goals</div><p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin:0;">Top-down and bottom-up goals deployment.</p></div>
-            <div><div style="font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">Strategy Design</div><p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin:0;">Strategies with clear owners and measurable outcomes.</p></div>
-            <div><div style="font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">Ops Assessments</div><p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin:0;">Gaps, risks, and improvement opportunities.</p></div>
-            <div><div style="font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">GMP Quality Systems</div><p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin:0;">FDA readiness and compliance management.</p></div>
+          <div style="padding:20px 28px; display:flex; flex-direction:column; gap:8px;">
+            <div style="font-size:11px; font-weight:600; color:rgba(255,255,255,0.4); letter-spacing:1px;">Org goals · Strategy design · Ops assessments · GMP quality</div>
           </div>
         </div>
-
-        <div style="display:grid; grid-template-columns:260px 1fr; gap:0; border-bottom:1px solid rgba(255,255,255,0.08);">
-          <div style="padding:36px 32px; border-right:1px solid rgba(255,255,255,0.08);">
+        <div style="border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-lg); overflow:hidden;">
+          <div style="padding:32px 28px; border-bottom:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.04);">
             <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:var(--gold); margin-bottom:12px;">02</div>
             <h3 style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:22px; font-weight:800; color:var(--white); margin-bottom:10px;">Operations</h3>
-            <p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.5); line-height:1.7; margin:0;">Deep GMP and non-GMP expertise. FDA, TPS, and Kaizen fluency built in.</p>
+            <p style="font-size:13.5px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.7; margin:0;">Deep GMP and non-GMP expertise across biotech, CDMO, and tech. FDA, TPS, and Kaizen fluency built in.</p>
           </div>
-          <div style="padding:36px 32px; display:grid; grid-template-columns:1fr 1fr; gap:16px 32px;">
-            <div><div style="font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">Lean & TPS</div><p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin:0;">Eliminate waste and build operational discipline.</p></div>
-            <div><div style="font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">GMP Ops & CAPA</div><p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin:0;">FDA 483 responses and CAPA systems.</p></div>
-            <div><div style="font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">Data & Dashboards</div><p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin:0;">KPI dashboards and predictive analytics.</p></div>
-            <div><div style="font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">Metrics Development</div><p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin:0;">Link site metrics to organizational goals.</p></div>
+          <div style="padding:20px 28px;">
+            <div style="font-size:11px; font-weight:600; color:rgba(255,255,255,0.4); letter-spacing:1px;">Lean & TPS · GMP & CAPA · Data & dashboards · KPIs</div>
           </div>
         </div>
-
-        <div style="display:grid; grid-template-columns:260px 1fr; gap:0;">
-          <div style="padding:36px 32px; border-right:1px solid rgba(255,255,255,0.08);">
+        <div style="border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-lg); overflow:hidden;">
+          <div style="padding:32px 28px; border-bottom:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.04);">
             <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:var(--gold); margin-bottom:12px;">03</div>
             <h3 style="font-family:'Barlow','Arial Narrow',Arial,sans-serif; font-size:22px; font-weight:800; color:var(--white); margin-bottom:10px;">Management Consulting</h3>
-            <p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.5); line-height:1.7; margin:0;">Building capability that lasts — A3, PDCA, Kaizen, and IMS embedded.</p>
+            <p style="font-size:13.5px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.7; margin:0;">Building management capability to sustain results — A3, PDCA, Kaizen, and IMS embedded into your team.</p>
           </div>
-          <div style="padding:36px 32px; display:grid; grid-template-columns:1fr 1fr; gap:16px 32px;">
-            <div><div style="font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">Leadership Coaching</div><p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin:0;">Leaders who sustain excellence independently.</p></div>
-            <div><div style="font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">IMS Design</div><p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin:0;">Connect quality, ops, and strategy into one structure.</p></div>
-            <div><div style="font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">A3 Problem-Solving</div><p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin:0;">Root cause resolution as a permanent capability.</p></div>
-            <div><div style="font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">Value Stream & Kanban</div><p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin:0;">Map flows, identify waste, implement pull systems.</p></div>
+          <div style="padding:20px 28px;">
+            <div style="font-size:11px; font-weight:600; color:rgba(255,255,255,0.4); letter-spacing:1px;">Leadership · IMS · A3 problem-solving · Value stream</div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- INDUSTRIES -->
-  <section class="industries-section">
+  <section class="industries-section" style="background:#edf2f7 !important; color:#0b1620 !important;">
     <div class="industries-inner">
       <div class="eyebrow">Where we focus</div>
       <h2>Built for two of the most<br>demanding industries on earth.</h2>
@@ -939,12 +947,10 @@ nav .nav-links a { font-size: 13px; }
         <div class="industry-card">
           <h3>Life Sciences</h3>
           <p>Biotech, pharmaceutical, and medical device organizations face a unique intersection of scientific complexity, regulatory pressure, and operational scale. Our founders have spent decades in this environment — from clinical manufacturing to commercial launch — and understand the constraints that generic consultants don't.</p>
-          <div class="industry-tags"><span>Biotech</span><span>Pharma</span><span>GMP Manufacturing</span><span>CDMO</span><span>Medical Devices</span><span>Cell &amp; Gene Therapy</span></div>
         </div>
         <div class="industry-card">
           <h3>Technology</h3>
           <p>High-growth tech companies often scale faster than their operational infrastructure can support. We bring the rigorous systems thinking of world-class manufacturing to the speed and ambiguity of tech — helping teams build processes, metrics, and management systems that actually hold up under pressure.</p>
-          <div class="industry-tags"><span>SaaS</span><span>Hardware</span><span>Operations</span><span>Scale-ups</span><span>Supply Chain</span><span>Product Ops</span></div>
         </div>
       </div>
     </div>

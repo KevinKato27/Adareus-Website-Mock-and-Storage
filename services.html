@@ -11,6 +11,22 @@
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; border: 0; outline: 0; }
 
+/* Font size increases */
+html { font-size: 17px; }
+body { font-size: 17px; }
+p { font-size: 16px; line-height: 1.9; }
+.hero-sub { font-size: 19px !important; line-height: 1.75 !important; }
+.story-block p { font-size: 16px !important; }
+.founder-bio p { font-size: 15px !important; }
+.service-desc-col p { font-size: 16px !important; }
+.step-body p { font-size: 15px !important; }
+.ai-point p { font-size: 15px !important; }
+.problem-card p { font-size: 15px !important; }
+nav .nav-links a { font-size: 14px; }
+.eyebrow { font-size: 11.5px !important; }
+.footer-links-list a { font-size: 14px; }
+.footer-tagline { font-size: 14px; }
+
 :root {
   --ink:         #0b1620;
   --ink-mid:     #122233;
@@ -384,15 +400,19 @@ nav .nav-links a { font-size: 13px; }
     .industries-section {
       padding: 80px 56px;
       border-bottom: 1px solid var(--border);
-      background: var(--off-white);
+      background: var(--ink-mid);
     }
-    .industries-inner { max-width: 1160px; margin: 0 auto; }
+    .industries-inner { max-width: 1160px; margin: 0 auto; color: var(--white); }
+    .industries-inner .eyebrow { color: var(--gold); }
+    .industries-inner h2 { color: var(--white); }
     .industries-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
     .industry-card {
-      background: var(--white); border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
       border-radius: var(--radius-lg); padding: 40px 36px;
       transition: border-color 0.25s, transform 0.25s;
     }
+    .industry-card h3 { color: var(--white); }
+    .industry-card p { color: rgba(255,255,255,0.8); }
     .industry-card:hover { border-color: var(--gold-line); transform: translateY(-3px); }
     .industry-card-icon {
       width: 44px; height: 44px; background: var(--ink);
@@ -720,12 +740,14 @@ nav .nav-links a { font-size: 13px; }
     .industries-section {
       padding: 80px 56px;
       border-bottom: 1px solid var(--border);
-      background: var(--off-white);
+      background: var(--ink-mid);
     }
-    .industries-inner { max-width: 1160px; margin: 0 auto; }
+    .industries-inner { max-width: 1160px; margin: 0 auto; color: var(--white); }
+    .industries-inner .eyebrow { color: var(--gold); }
+    .industries-inner h2 { color: var(--white); }
     .industries-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
     .industry-card {
-      background: var(--white); border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
       border-radius: var(--radius-lg); padding: 40px 36px;
       transition: border-color 0.25s, transform 0.25s;
     }
@@ -817,6 +839,32 @@ nav .nav-links a { font-size: 13px; }
       </div>
     </div>
   </section>
+
+    <!-- TICKER -->
+  <div class="ticker-section">
+    <div class="ticker-label-block">Built inside these organizations</div>
+    <div class="ticker-viewport">
+      <div class="ticker-track">
+        <span class="ticker-item" style="font-weight:800; letter-spacing:3px; font-size:13px;">TOYOTA</span>
+        <span class="ticker-item" style="font-weight:400; letter-spacing:1px; font-size:12px; text-transform:none;">FUJIFILM Diosynth</span>
+        <span class="ticker-item" style="font-weight:700; letter-spacing:2.5px; font-size:12px;">AMGEN</span>
+        <span class="ticker-item" style="font-weight:400; letter-spacing:0.5px; font-size:12px; text-transform:none;">Atara Biotherapeutics</span>
+        <span class="ticker-item" style="font-weight:700; letter-spacing:2px; font-size:12px;">ALEXION</span>
+        <span class="ticker-item" style="font-weight:400; letter-spacing:1px; font-size:12px; text-transform:none;">Allergan</span>
+        <span class="ticker-item" style="font-weight:600; letter-spacing:1.5px; font-size:12px; text-transform:none;">Blue Nile</span>
+        <span class="ticker-item" style="font-weight:800; letter-spacing:3px; font-size:12px;">HONEYWELL</span>
+        <span class="ticker-item" style="font-weight:800; letter-spacing:3px; font-size:13px;">TOYOTA</span>
+        <span class="ticker-item" style="font-weight:400; letter-spacing:1px; font-size:12px; text-transform:none;">FUJIFILM Diosynth</span>
+        <span class="ticker-item" style="font-weight:700; letter-spacing:2.5px; font-size:12px;">AMGEN</span>
+        <span class="ticker-item" style="font-weight:400; letter-spacing:0.5px; font-size:12px; text-transform:none;">Atara Biotherapeutics</span>
+        <span class="ticker-item" style="font-weight:700; letter-spacing:2px; font-size:12px;">ALEXION</span>
+        <span class="ticker-item" style="font-weight:400; letter-spacing:1px; font-size:12px; text-transform:none;">Allergan</span>
+        <span class="ticker-item" style="font-weight:600; letter-spacing:1.5px; font-size:12px; text-transform:none;">Blue Nile</span>
+        <span class="ticker-item" style="font-weight:800; letter-spacing:3px; font-size:12px;">HONEYWELL</span>
+      </div>
+    </div>
+  </div>
+
   <!-- SERVICES -->
   <section style="padding:80px 56px; border-bottom:1px solid var(--border); background:var(--white);">
     <div style="max-width:1160px; margin:0 auto;">
